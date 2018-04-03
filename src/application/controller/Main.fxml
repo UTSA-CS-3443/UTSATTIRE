@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <Label layoutX="199.0" layoutY="55.0" text="UTSAttire">
+         <font>
+            <Font name="Serif Regular" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnWeather" layoutX="65.0" layoutY="389.0" mnemonicParsing="false" onAction="#buttonClicked" text="Check Weather" />
+      <Button fx:id="btnWardrobe" layoutX="268.0" layoutY="389.0" mnemonicParsing="false" onAction="#buttonClicked" text="Wardrobe" />
+      <Button fx:id="btnOutfit" layoutX="434.0" layoutY="389.0" mnemonicParsing="false" text="Get Outfit" />
+      <AmbientLight color="CHARTREUSE" layoutX="80.0" layoutY="82.0" lightOn="true" />
+   </children>
+</AnchorPane>

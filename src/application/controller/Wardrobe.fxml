@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.WardrobeController">
+   <children>
+      <Label layoutX="247.0" layoutY="30.0" text="Wardrobe">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnHome" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonClicked" text="Home" />
+   </children>
+</AnchorPane>
