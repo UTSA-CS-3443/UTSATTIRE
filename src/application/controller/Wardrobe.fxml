@@ -14,5 +14,15 @@
          </font>
       </Label>
       <Button fx:id="btnHome" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonClicked" text="Home" />
+      <Button layoutX="277.0" layoutY="300.0" mnemonicParsing="false" text="Shirts" />
+      <Button layoutX="130.0" layoutY="300.0" mnemonicParsing="false" text="T-Shirts" />
+      <Button layoutX="137.0" layoutY="438.0" mnemonicParsing="false" text="Jeans" />
+      <Button layoutX="422.0" layoutY="438.0" mnemonicParsing="false" text="Shorts" />
+      <TextField layoutX="125.0" layoutY="79.0" prefHeight="27.0" prefWidth="389.0" text="Add and Remove clothing pieces by catergory" />
+      <Button layoutX="448.0" layoutY="187.0" mnemonicParsing="false" text="Jackets" />
+      <Button layoutX="254.0" layoutY="424.0" mnemonicParsing="false" text="Dress Pants" />
+      <Button layoutX="276.0" layoutY="519.0" mnemonicParsing="false" text="Shoes" />
+      <Button layoutX="282.0" layoutY="201.0" mnemonicParsing="false" text="Ties" />
+      <Button layoutX="437.0" layoutY="314.0" mnemonicParsing="false" text="Dresses" />
    </children>
 </AnchorPane>

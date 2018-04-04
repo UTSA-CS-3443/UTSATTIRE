@@ -19,13 +19,22 @@ public class WeatherController implements Initializable {
 	@FXML
 	public Button btnHome;	
     
+	
     @Override
     public void initialize(URL location, ResourceBundle resources) {
        
 
         }
 
-
+    public void WeatherController() {
+    
+      getWeather();
+    }
+    
+    
+    public void getWeather() {
+    	
+    }
     
     @FXML
     public void buttonClicked(ActionEvent event) throws IOException {
