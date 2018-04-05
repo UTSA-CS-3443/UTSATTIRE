@@ -6,12 +6,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.WeatherController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.WeatherController">
    <children>
-      <Button fx:id="btnHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonClicked" text="Home" />
-      <Label layoutX="233.0" layoutY="30.0" text="Weather">
+      <Button fx:id="btnHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonClicked" style="-fx-background-color: #E85B25;" text="Home" textFill="WHITE">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="455.0" layoutY="7.0" text="Weather" textFill="#e85b25">
+         <font>
+            <Font size="99.0" />
          </font>
       </Label>
    </children>
