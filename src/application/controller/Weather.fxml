@@ -25,21 +25,14 @@
       </ImageView>
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="540.0" layoutY="300.0">
          <image>
-<<<<<<< HEAD
+
             <Image url="@/Resource/partly-cloudy.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="960.0" layoutY="300.0">
          <image>
             <Image url="@/Resource/rainy.png" />
-=======
-            <Image url="@/Resourse/Desktop/partly%20cloudy.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="960.0" layoutY="300.0">
-         <image>
-            <Image url="@/Resourse/Desktop/rainy.png" />
->>>>>>> branch 'master' of https://github.com/UTSA-CS-3443/UTSATTIRE.git
+
          </image>
       </ImageView>
       <Label layoutX="121.0" layoutY="194.0" text="Today" textFill="#e85b25">
