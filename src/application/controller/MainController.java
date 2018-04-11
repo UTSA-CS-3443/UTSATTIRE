@@ -17,6 +17,8 @@ public class MainController {
 	public Button btnWeather;
 	@FXML
 	public Button btnWardrobe;
+	@FXML
+	public Button btnOutfit;
 	
 	@FXML
 	public void buttonClicked(ActionEvent event) throws IOException {
@@ -36,6 +38,16 @@ public class MainController {
 			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation( Main.class.getResource("controller/Wardrobe.fxml") );
+
+			AnchorPane layout = (AnchorPane) loader.load();				
+			Scene scene = new Scene( layout );
+
+			Main.stage.setScene(scene);
+			
+		} else if (event.getSource() == btnOutfit){
+			
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation( Main.class.getResource("controller/Outfit.fxml") );
 
 			AnchorPane layout = (AnchorPane) loader.load();				
 			Scene scene = new Scene( layout );
