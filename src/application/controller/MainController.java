@@ -47,11 +47,11 @@ public class MainController {
 		} else if (event.getSource() == btnOutfit){
 			
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation( Main.class.getResource("controller/Outfit.fxml") );
-
-			AnchorPane layout = (AnchorPane) loader.load();				
-			Scene scene = new Scene( layout );
-
+			loader.setLocation(Main.class.getResource("controller/Outfit.fxml"));
+			
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+			
 			Main.stage.setScene(scene);
 			
 		}
