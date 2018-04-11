@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -10,11 +11,86 @@
    <children>
       <Button fx:id="btnHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonClicked" style="-fx-background-color: #E85B25;" text="Home" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="18.0" />
          </font></Button>
       <Label layoutX="455.0" layoutY="7.0" text="Weather" textFill="#e85b25">
          <font>
             <Font size="99.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="97.0" layoutY="300.0">
+         <image>
+            <Image url="@/Resource/sunny.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="540.0" layoutY="300.0">
+         <image>
+            <Image url="@/Resource/partly-cloudy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="960.0" layoutY="300.0">
+         <image>
+            <Image url="@/Resource/rainy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="121.0" layoutY="194.0" text="Today" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="577.0" layoutY="194.0" text="Friday" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="967.0" layoutY="194.0" text="Saturday" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="539.0" text="Sunny" textFill="#e85b25">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="536.0" layoutY="539.0" text="Partly Cloudy" textFill="#e85b25">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="1017.0" layoutY="539.0" text="Rainy" textFill="#e85b25">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="592.0" text="High: 90" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="592.0" text="High: 86" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1027.0" layoutY="592.0" text="High: 83" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="619.0" text="Low: 71" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="619.0" text="Low: 65" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1027.0" layoutY="619.0" text="Low: 60" textFill="#e85b25">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
    </children>

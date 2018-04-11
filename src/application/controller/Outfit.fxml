@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OutfitGenController ">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OutfitGenController">
    <children>
       <Button fx:id="btnHome" layoutX="35.0" layoutY="32.0" mnemonicParsing="false" onAction="#buttonClicked" style="-fx-background-color: #E85B25;" text="Home" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="341.0" layoutY="322.0" mnemonicParsing="false" style="-fx-background-color: #E85B25;" text="Generate" textFill="WHITE">
+      <Button fx:id="btnGenerate" layoutX="540.0" layoutY="694.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #E85B25;" text="Generate" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Button>
+      <Label layoutX="200.0" layoutY="141.0" text="Top" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="365.0" text="Pants" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="554.0" text="Shoes" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="834.0" layoutY="141.0" text="RVCA Tank Top" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="864.0" layoutY="365.0" text="Denim Jeans" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="831.0" layoutY="554.0" text="Red Nike Shoes" textFill="#e85b25">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="138.0" layoutX="572.0" layoutY="76.0">
+         <image>
+            <Image url="@/Resource/RVCA_tank_top.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="151.0" fitWidth="151.0" layoutX="565.0" layoutY="514.0">
+         <image>
+            <Image url="@/Resource/nike_shoes.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="190.0" fitWidth="190.0" layoutX="546.0" layoutY="305.0">
+         <image>
+            <Image url="@/Resource/mens-destructed-light-wash-skinny-slim-jeans-product.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
