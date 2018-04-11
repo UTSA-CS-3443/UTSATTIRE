@@ -10,14 +10,14 @@
    <children>
       <Label layoutX="518.0" layoutY="54.0" text="Wardrobe" textFill="WHITE">
          <font>
-            <Font size="56.0" />
+            <Font size="57.0" />
          </font>
       </Label>
       <Button fx:id="btnHome" layoutX="49.0" layoutY="43.0" mnemonicParsing="false" onAction="#buttonClicked" style="-fx-background-color: #E85B25;" text="Home" textFill="WHITE">
          <font>
             <Font name="System Bold" size="46.0" />
          </font></Button>
-      <Button layoutX="430.0" layoutY="182.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Tops" textFill="WHITE">
+      <Button layoutX="430.0" layoutY="181.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Tops" textFill="WHITE">
          <font>
             <Font size="46.0" />
          </font></Button>
