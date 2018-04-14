@@ -17,15 +17,15 @@
          <font>
             <Font name="System Bold" size="46.0" />
          </font></Button>
-      <Button layoutX="430.0" layoutY="181.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Tops" textFill="WHITE">
+      <Button fx:id="Tops" layoutX="430.0" layoutY="181.0" mnemonicParsing="false" onAction="#addToWardrobe" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Tops" textFill="WHITE">
          <font>
             <Font size="46.0" />
          </font></Button>
-      <Button layoutX="429.0" layoutY="332.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Bottoms" textFill="WHITE">
+      <Button fx:id="Bottoms" layoutX="429.0" layoutY="332.0" mnemonicParsing="false" onAction="#addToWardrobe" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Bottoms" textFill="WHITE">
          <font>
             <Font name="System Bold" size="46.0" />
          </font></Button>
-      <Button layoutX="429.0" layoutY="482.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Footwear" textFill="WHITE">
+      <Button fx:id="Footwear" layoutX="429.0" layoutY="482.0" mnemonicParsing="false" onAction="#addToWardrobe" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Footwear" textFill="WHITE">
          <font>
             <Font size="46.0" />
          </font></Button>
