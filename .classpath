@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="src/WeatherLibrary.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/WeatherLibrary.jar"/>
+	<classpathentry kind="lib" path="/Users/shannahewgley/git/UTSATTIRE/libs/WeatherLibrary.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

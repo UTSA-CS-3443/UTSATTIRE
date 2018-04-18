@@ -3,6 +3,10 @@ package application.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.teknikindustries.yahooweather.WeatherDisplay;
+import com.teknikindustries.yahooweather.WeatherDoc;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,21 +18,32 @@ import javafx.scene.layout.AnchorPane;
 
 
 
-public class WeatherController implements Initializable {
+public class WeatherController {
 	
 	@FXML
 	public Button btnHome;	
     
 	
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-       
+//    @Override
+//    public void initialize(URL location, ResourceBundle resources) {
+//       
+//
+//        }
 
-        }
-
-    public void WeatherController() {
+	public void initialize(){
+		 
+	}
+   
+	
+	
+	public WeatherController() {
     
-      getWeather();
+		WeatherDoc Doc = new WeatherDoc("12791879", "f");
+	      WeatherDisplay disp = new WeatherDisplay();
+	      
+	      System.out.println(disp.getTemperature()); 
+     
+      
     }
     
     
