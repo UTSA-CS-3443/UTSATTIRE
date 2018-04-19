@@ -20,7 +20,7 @@
       </Label>
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="97.0" layoutY="300.0">
          <image>
-            <Image url="@/Resource/sunny.png" />
+            <Image url="@http://openweathermap.org/img/w/02n.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="540.0" layoutY="300.0">

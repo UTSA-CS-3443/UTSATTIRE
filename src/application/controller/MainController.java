@@ -22,7 +22,6 @@ public class MainController {
 	
 	@FXML
 	public void buttonClicked(ActionEvent event) throws IOException {
-
 		
 		if(event.getSource() == btnWeather) {
 			
