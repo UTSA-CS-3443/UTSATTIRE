@@ -4,6 +4,7 @@ import javafx.scene.control.*;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import application.Main;
+import application.model.FiveDayForecast;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -25,6 +26,9 @@ public class MainController {
 		
 		if(event.getSource() == btnWeather) {
 			
+			FiveDayForecast fiveDayForecast = new FiveDayForecast();
+			System.out.println(fiveDayForecast.getForecast().get(0).getTempMax());
+			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation( Main.class.getResource("controller/Weather.fxml") );
 
@@ -35,6 +39,7 @@ public class MainController {
 			
 		}else if (event.getSource() == btnWardrobe){
 			
+			FiveDayForecast fiveDayForecast = new FiveDayForecast();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation( Main.class.getResource("controller/Wardrobe.fxml") );
 
@@ -45,6 +50,7 @@ public class MainController {
 			
 		} else if (event.getSource() == btnOutfit){
 			
+			FiveDayForecast fiveDayForecast = new FiveDayForecast();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("controller/Outfit.fxml"));
 			

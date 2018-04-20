@@ -23,17 +23,6 @@ public class WeatherController {
 	public Button btnHome;	
     
 	
-	public void initialize(URL location, ResourceBundle resources) {
-		try {
-			FiveDayForecast fiveDayForecast = new FiveDayForecast();
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-    }
-	
     @FXML
     public void buttonClicked(ActionEvent event) throws IOException {
     	
