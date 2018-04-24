@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AddController">
    <children>
-      <Button layoutX="190.0" layoutY="707.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #E85B25;" text="Choose File" />
+      <Button layoutX="95.0" layoutY="642.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #E85B25;" text="Choose File" />
       <CheckBox fx:id="eightyPlus" layoutX="97.0" layoutY="390.0" mnemonicParsing="false" text="80+°" textFill="#e85b25" />
       <CheckBox fx:id="sevNineToSixFive" layoutX="97.0" layoutY="453.0" mnemonicParsing="false" text="79° - 65°" textFill="#e85b25" />
       <CheckBox fx:id="sixFourToFifOne" layoutX="97.0" layoutY="523.0" mnemonicParsing="false" text="64° - 51°" textFill="#e85b25" />
@@ -24,5 +24,6 @@
             <Font size="24.0" />
          </font>
       </Text>
+      <Button fx:id="save" layoutX="608.0" layoutY="732.0" mnemonicParsing="false" onAction="#buttonClicked" text="Save" />
    </children>
 </AnchorPane>
