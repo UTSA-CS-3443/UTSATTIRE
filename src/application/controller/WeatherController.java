@@ -19,10 +19,21 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-
+/**
+ * 
+ * @author Members of Team Dragon
+ *
+ */
 
 public class WeatherController implements Initializable{
 	
+	
+	/**
+	 * Buttons and Labels created for GUI interface of weather screen.
+	 * Will display a Return Home Button, 3 days of weather forecast 
+	 * Highs and Lows for each day and the conditions.
+	 * 
+	 */
 	@FXML
 	public Button btnHome;	
 	
@@ -43,7 +54,11 @@ public class WeatherController implements Initializable{
 
 
     
-	
+	/**
+	 * Action Event for the Return Home Button
+	 * @param event
+	 * @throws IOException
+	 */
     @FXML
     public void buttonClicked(ActionEvent event) throws IOException {
     	
@@ -58,11 +73,14 @@ public class WeatherController implements Initializable{
     		Main.stage.setScene(scene);
     		
     	}
-}
+    }
 
 
 
-
+    /**
+     * initialize method sets all the current weather stats on the labels.  
+     * Each time you return it will make a call to the API and update labels.
+     */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub

@@ -8,8 +8,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+/**
+ * 
+ * @author members of Team Dragon
+ *
+ */
 public class FiveDayForecast {
 	
+	/**
+	 * Arraylist 
+	 */
 	public static ArrayList<DailyWeather> forecast = new ArrayList();
 	
 	
@@ -79,6 +88,13 @@ public class FiveDayForecast {
 		FiveDayForecast.forecast = forecast;
 	}
 
+	/**
+	 * Method created to convert the Double Kelvin temp. we get from the weather data
+	 * euation takes in Kelvin as Double and convert to Celsius and then Fahrenheit and will return
+	 * Double Value of Fahrenheit.  
+	 * @param k
+	 * @return
+	 */
 	public static double getFahrenheit(double k) {
 	
 		double kelvin = k;

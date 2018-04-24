@@ -6,9 +6,18 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * 
+ * @author All Members of Team Dragon
+ *
+ */
 
 public class Main extends Application {
 	
+	
+	/**
+	 * Creating the stage 
+	 */
 	public static Stage stage;
 	
 	@Override
@@ -35,6 +44,10 @@ public class Main extends Application {
 		}
 	}
 	
+	/**
+	 * Main
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

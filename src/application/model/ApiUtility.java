@@ -37,6 +37,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+
+/**
+ * 
+ * @author members of Team Dragon
+ *
+ */
 public class ApiUtility {
 	public static String callAPI(String apiEndpoint) throws ClientProtocolException, IOException {
     CloseableHttpClient httpclient = HttpClients.createDefault();

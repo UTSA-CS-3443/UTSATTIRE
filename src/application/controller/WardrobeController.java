@@ -13,7 +13,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
-
+/**
+ * 
+ * @author members of Team Dragon
+ *
+ */
 
 public class WardrobeController implements Initializable {
 	

@@ -4,9 +4,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+/**
+ * 
+ * @author members of Team Dragon
+ *
+ */
 public class DailyWeather {
 	
-	
+	/**
+	 * Class variables being created and will generate Getter/Setters.
+	 * Each for the data that comes from the Weather API
+	 */
 	double temp;
 	double tempMin;
 	double tempMax;
