@@ -3,22 +3,35 @@ package application.controller;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.ArrayList;
 
+import application.model.Wardrobe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 
 public class AddController 
 {
+	ArrayList<Wardrobe> Top, Bottom, Shoe;
 	
 	@FXML
 	private Button choose;
 	
+	@FXML
+	TextField userInput;
 	
+	@FXML
+	Text title;
 	
+	//80+, 79-65, 64-51, 50-
+	@FXML
+	CheckBox eightyPlus, sevNineToSixFive, sixFourToFifOne, fiftyBelow;
 	
 	
 	@FXML
