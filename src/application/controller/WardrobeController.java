@@ -22,9 +22,9 @@ public class WardrobeController implements Initializable {
 	@FXML
 	private Button clickCheck;
     @FXML
-    private Button Tops, Bottoms, Footwear;
+    private Button Tops, Bottoms, Footwear, edit;
 	
-    public static Wardrobe closet = new Wardrobe();
+    //public static Wardrobe closet = new Wardrobe();
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -32,23 +32,49 @@ public class WardrobeController implements Initializable {
 
         }
 
+    /**
+     * addToWardrobe function is for any of the add buttons clicked to switch to the same Add fxml page. 
+     * 
+     * @param event
+     * @throws IOException
+     */
 	@FXML
 	public void addToWardrobe(ActionEvent event) throws IOException {
 		
 
 		clickCheck = (Button)event.getSource();
-	
+		
+		//User clicks which button, and switches to Add function 
+		//along with creating a wardrobe item with String of which tier of clothing
 		if (clickCheck == Tops) {
-			closet.addClothing();
+			
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
+
+    		AnchorPane layout = (AnchorPane) loader.load();				
+    		Scene scene = new Scene( layout );
+
+    		Main.stage.setScene(scene);	
 		}
 		else if (clickCheck == Bottoms) {
-			closet.addClothing();
+			
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
+
+    		AnchorPane layout = (AnchorPane) loader.load();				
+    		Scene scene = new Scene( layout );
+
+    		Main.stage.setScene(scene);	
 		}
 		else if (clickCheck == Footwear) {
-			closet.addClothing();
-		}
-		else {
 			
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
+
+    		AnchorPane layout = (AnchorPane) loader.load();				
+    		Scene scene = new Scene( layout );
+
+    		Main.stage.setScene(scene);	
 		}
 		
 	}
@@ -64,9 +90,19 @@ public class WardrobeController implements Initializable {
     		AnchorPane layout = (AnchorPane) loader.load();				
     		Scene scene = new Scene( layout );
 
-    		Main.stage.setScene(scene);
-    		
+    		Main.stage.setScene(scene);	
     	}
+    	else if(event.getSource() == edit)
+    	{
+    		FXMLLoader loader = new FXMLLoader();
+    		loader.setLocation( Main.class.getResource("controller/Edit.fxml") );
+
+    		AnchorPane layout = (AnchorPane) loader.load();				
+    		Scene scene = new Scene( layout );
+
+    		Main.stage.setScene(scene);	
+    	}
+    	
 }
     
 }

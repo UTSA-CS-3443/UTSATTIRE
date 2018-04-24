@@ -11,10 +11,18 @@ import java.util.Scanner;
  *
  */
 public class Wardrobe {
-
 	
-	public Wardrobe() {
+	//String to determine which clothing ("top", "bottom", or "shoe")
+	private String clothingTier;
+	
+	/**
+	 * Wardrobe constructor
+	 * 
+	 * @param cT
+	 */
+	public Wardrobe(String cT) {
 		
+		this.clothingTier = cT;
 	}
 	
 	Scanner userInput = new Scanner(System.in);

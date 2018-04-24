@@ -29,7 +29,7 @@
          <font>
             <Font size="46.0" />
          </font></Button>
-      <Button layoutX="427.0" layoutY="626.0" mnemonicParsing="false" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Edit Wardrobe" textFill="WHITE">
+      <Button fx:id="edit" layoutX="427.0" layoutY="626.0" mnemonicParsing="false" onAction="#buttonClicked" prefWidth="430.0" style="-fx-background-color: #E85B25;" text="Edit Wardrobe" textFill="WHITE">
          <font>
             <Font size="46.0" />
          </font>
