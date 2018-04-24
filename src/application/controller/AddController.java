@@ -31,7 +31,7 @@ public class AddController
 		System.out.println(f.getName());
 		
 		File f1 = new File("C:\\User\\zzn974\\Desktop\\Chrysanthemum.jpg");
-		
+		f.toPath();
 		System.out.println(f.getAbsolutePath());
 		
 		
