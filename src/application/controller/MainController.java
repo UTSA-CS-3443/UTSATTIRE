@@ -26,8 +26,8 @@ public class MainController {
 		
 		if(event.getSource() == btnWeather) {
 			
-			FiveDayForecast fiveDayForecast = new FiveDayForecast();
-			System.out.println(fiveDayForecast.getForecast().get(0).getTempMax());
+			
+			
 			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation( Main.class.getResource("controller/Weather.fxml") );

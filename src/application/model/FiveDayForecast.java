@@ -12,6 +12,7 @@ public class FiveDayForecast {
 	
 	public static ArrayList<DailyWeather> forecast = new ArrayList();
 	
+	
 	public FiveDayForecast() throws ClientProtocolException, IOException {
 		
 		
@@ -54,11 +55,12 @@ public class FiveDayForecast {
 	/**
 	 * @return the forecast
 	 */
-	public static ArrayList<String> getPrettyForecast() {
+	public ArrayList<String> getPrettyForecast() {
 		ArrayList<String> list = new ArrayList<String>();
 		//loop through objects and print information 
 		// for each object 
 		// string = "Temp:" + object.temp 
+	
 		
 		return list;
 	}
@@ -77,4 +79,14 @@ public class FiveDayForecast {
 		FiveDayForecast.forecast = forecast;
 	}
 
+	public static double getFahrenheit(double k) {
+	
+		double kelvin = k;
+		double celsius = kelvin - 273.0;
+		double fah = (celsius * 9.0/5.0) + 32.0;
+		fah = Math.round(fah * 10.0) / 10.0;
+		
+		return fah;
+	}
+	
 }
