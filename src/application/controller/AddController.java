@@ -1,6 +1,8 @@
 package application.controller;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,11 +30,16 @@ public class AddController
 		c.getExtensionFilters().add(new ExtensionFilter("PNG","*.png"));
 		File f = c.showOpenDialog(null);
 		
-		System.out.println(f.getName());
+		//System.out.println(f.getName());
 		
-		File f1 = new File("C:\\User\\zzn974\\Desktop\\Chrysanthemum.jpg");
-		f.toPath();
-		System.out.println(f.getAbsolutePath());
+		File f1 = new File("src/Resource/newPic.png");
+		try {
+			Files.copy(f.toPath(),f1.toPath());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(f1.getAbsolutePath());
 		
 		
 	}
