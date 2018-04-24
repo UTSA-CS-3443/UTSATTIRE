@@ -24,7 +24,7 @@ public class WardrobeController implements Initializable {
     @FXML
     private Button Tops, Bottoms, Footwear, edit;
 	
-    public static Wardrobe addWardrobe;
+    public static String clothingTier;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,10 +45,10 @@ public class WardrobeController implements Initializable {
 		clickCheck = (Button)event.getSource();
 		
 		//User clicks which button, and switches to Add function 
-		//along with creating a wardrobe item with String of which tier of clothing
+		//along with changing string clothingTier to appropriate clothing
 		if (clickCheck == Tops) {
 			
-			addWardrobe = new Wardrobe("top");
+			clothingTier = "top";
 			
     		FXMLLoader loader = new FXMLLoader();
     		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
@@ -60,7 +60,7 @@ public class WardrobeController implements Initializable {
 		}
 		else if (clickCheck == Bottoms) {
 			
-			addWardrobe = new Wardrobe("bottom");
+			clothingTier = "bottom";
 			
     		FXMLLoader loader = new FXMLLoader();
     		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
@@ -72,7 +72,7 @@ public class WardrobeController implements Initializable {
 		}
 		else if (clickCheck == Footwear) {
 			
-			addWardrobe = new Wardrobe("shoe");
+			clothingTier = "shoe";
 			
     		FXMLLoader loader = new FXMLLoader();
     		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
