@@ -8,6 +8,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javafx.scene.image.Image;
+
 
 /**
  * 
@@ -20,6 +22,8 @@ public class FiveDayForecast {
 	 * Arraylist 
 	 */
 	public static ArrayList<DailyWeather> forecast = new ArrayList();
+	
+	
 	
 	
 	public FiveDayForecast() throws ClientProtocolException, IOException {
@@ -106,3 +110,5 @@ public class FiveDayForecast {
 	}
 	
 }
+
+	

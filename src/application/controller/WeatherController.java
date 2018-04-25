@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
@@ -52,7 +53,7 @@ public class WeatherController implements Initializable{
     @FXML
     private Label today, day2, day3;
 
-
+  
     
 	/**
 	 * Action Event for the Return Home Button
@@ -104,6 +105,18 @@ public class WeatherController implements Initializable{
 			low1.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(0).getTempMin())));
 			low2.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(1).getTempMin())));
 			low3.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(2).getTempMin())));
+			
+			
+			 String path1 = (FiveDayForecast.getForecast().get(0).getIcon());
+			 String path2 = (FiveDayForecast.getForecast().get(1).getIcon());
+			 String path3 = (FiveDayForecast.getForecast().get(2).getIcon());
+			 Image image1 = new Image(path1);
+			 Image image2 = new Image(path2);
+			 Image image3 = new Image(path3);
+			
+			imgToday.setImage(image1);
+			imgday2.setImage(image2);
+			imgday3.setImage(image3);
 			
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block

@@ -76,7 +76,7 @@ public class DailyWeather {
 	 * @return the icon
 	 */
 	public String getIcon() {
-		return icon;
+		return "http://openweathermap.org/img/w/" + icon + ".png";
 	}
 	/**
 	 * @param icon the icon to set
