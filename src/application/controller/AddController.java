@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 
+import application.Main;
 import application.model.Wardrobe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
@@ -33,6 +37,52 @@ public class AddController
 	@FXML
 	CheckBox eightyPlus, sevNineToSixFive, sixFourToFifOne, fiftyBelow;
 	
+	@FXML
+	Button save;
+	
+	@FXML
+	public void buttonClicked(ActionEvent event) throws IOException {
+		
+		//When user clicks save button
+		if(event.getSource() == save) {
+			
+			//check if user is adding a top, bottom, or shoe
+			if(WardrobeController.clothingTier == "top")
+			{
+				
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation( Main.class.getResource("controller/Wardrobe.fxml") );
+
+				AnchorPane layout = (AnchorPane) loader.load();				
+				Scene scene = new Scene( layout );
+
+				Main.stage.setScene(scene);
+			}
+			else if(WardrobeController.clothingTier == "bottom")
+			{
+			
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation( Main.class.getResource("controller/Wardrobe.fxml") );
+
+				AnchorPane layout = (AnchorPane) loader.load();				
+				Scene scene = new Scene( layout );
+
+				Main.stage.setScene(scene);
+			}
+			else if(WardrobeController.clothingTier == "shoe")
+			{
+			
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation( Main.class.getResource("controller/Wardrobe.fxml") );
+
+				AnchorPane layout = (AnchorPane) loader.load();				
+				Scene scene = new Scene( layout );
+
+				Main.stage.setScene(scene);
+			}
+			
+		}
+	}
 	
 	@FXML
 	public void chooseImage(ActionEvent event)
