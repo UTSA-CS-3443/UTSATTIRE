@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="Title" fill="#e85b25" layoutX="575.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit">
+         <font>
+            <Font name="System Bold" size="66.0" />
+         </font>
+      </Text>
+      <ListView layoutX="99.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView layoutX="540.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView layoutX="951.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
 </AnchorPane>
