@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -16,7 +17,8 @@
       <ListView fx:id="tops" layoutX="99.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="bottoms" layoutX="540.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="shoes" layoutX="951.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="edit" layoutX="622.0" layoutY="648.0" mnemonicParsing="false" text="Edit" />
+      <Button fx:id="edit" layoutX="622.0" layoutY="648.0" mnemonicParsing="false" onAction="#handle" text="Edit" />
       <Button fx:id="home" layoutX="75.0" layoutY="659.0" mnemonicParsing="false" text="Wardrobe" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="540.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

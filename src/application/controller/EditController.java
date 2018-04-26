@@ -2,17 +2,16 @@ package application.controller;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
-import application.model.Wardrobe;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
 
 public class EditController 
 {
@@ -26,6 +25,8 @@ public class EditController
 	private Button edit;
 	@FXML
 	private Button home;
+	@FXML
+	private ImageView current;
 	
 	
 	private ArrayList<String> top = new ArrayList<String>();
@@ -40,6 +41,7 @@ public class EditController
 		while(inputStream.hasNextLine())
 		{
 			String data = inputStream.nextLine();
+			String filePath;
 			String[] info = data.split(",");
 			top.add(info[0]);
 		}
@@ -51,6 +53,7 @@ public class EditController
 		while(inputStream1.hasNextLine())
 		{
 			String data = inputStream1.nextLine();
+			String filePath;
 			String[] info = data.split(",");
 			bottom.add(info[0]);
 		}
@@ -62,12 +65,19 @@ public class EditController
 		while(inputStream2.hasNextLine())
 		{
 			String data = inputStream2.nextLine();
+			String filePath;
 			String[] info = data.split(",");
 			shoe.add(info[0]);
 		}
 		inputStream2.close();
 		
 		
+	}
+	@FXML
+	public void handle(ActionEvent event)
+	{
+		System.out.println(tops.getSelectionModel().getSelectedItem());
+
 	}
 		
 	@FXML
