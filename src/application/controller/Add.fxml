@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -25,5 +26,6 @@
          </font>
       </Text>
       <Button fx:id="save" layoutX="608.0" layoutY="732.0" mnemonicParsing="false" onAction="#buttonClicked" text="Save" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="654.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
