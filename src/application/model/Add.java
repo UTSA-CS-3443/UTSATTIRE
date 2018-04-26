@@ -45,7 +45,7 @@ public class Add {
 		{
 			//then add new Wardrobe to arraylist
 			try {
-				PrintWriter pw = new PrintWriter(new FileOutputStream(new File("Top.csv"),true));
+				PrintWriter pw = new PrintWriter(new FileOutputStream(new File("Top.csv"),true)); 
 				StringBuilder sb = new StringBuilder();
 				sb.append(input);
 				sb.append(",");
