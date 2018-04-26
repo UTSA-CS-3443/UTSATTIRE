@@ -92,6 +92,8 @@ public class FiveDayForecast {
 		FiveDayForecast.forecast = forecast;
 	}
 
+	
+	
 	/**
 	 * Method created to convert the Double Kelvin temp. we get from the weather data
 	 * euation takes in Kelvin as Double and convert to Celsius and then Fahrenheit and will return

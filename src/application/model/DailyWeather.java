@@ -84,6 +84,8 @@ public class DailyWeather {
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
+	
+	
 	/**
 	 * @return the forecast
 	 */
