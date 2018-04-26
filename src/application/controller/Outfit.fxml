@@ -34,32 +34,32 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="834.0" layoutY="141.0" text="RVCA Tank Top" textFill="#e85b25">
+      <Label fx:id="topName" layoutX="834.0" layoutY="141.0" text="RVCA Tank Top" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="864.0" layoutY="365.0" text="Denim Jeans" textFill="#e85b25">
+      <Label fx:id="bottomName" layoutX="864.0" layoutY="365.0" text="Denim Jeans" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="831.0" layoutY="554.0" text="Red Nike Shoes" textFill="#e85b25">
+      <Label fx:id="shoeName" layoutX="831.0" layoutY="554.0" text="Red Nike Shoes" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <ImageView fitHeight="200.0" fitWidth="138.0" layoutX="572.0" layoutY="76.0">
+      <ImageView fx:id="topImage" fitHeight="200.0" fitWidth="138.0" layoutX="572.0" layoutY="76.0">
          <image>
             <Image url="@/Resource/RVCA_tank_top.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="151.0" fitWidth="151.0" layoutX="565.0" layoutY="514.0">
+      <ImageView fx:id="shoeImage" fitHeight="151.0" fitWidth="151.0" layoutX="565.0" layoutY="514.0">
          <image>
             <Image url="@/Resource/nike_shoes.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="190.0" fitWidth="190.0" layoutX="546.0" layoutY="305.0">
+      <ImageView fx:id="bottomImage" fitHeight="190.0" fitWidth="190.0" layoutX="546.0" layoutY="305.0">
          <image>
             <Image url="@/Resource/mens-destructed-light-wash-skinny-slim-jeans-product.jpg" />
          </image>

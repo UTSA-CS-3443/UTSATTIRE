@@ -13,8 +13,7 @@ public class Wardrobe {
 	private boolean temp1,  temp2, temp3, temp4;
 	
 	/**
-	 * First Wardrobe constructor with just description
-	 * if user did not want to upload image
+	 * Wardrobe constructor 
 	 * 
 	 * @param String name - Description of clothing
 	 */
@@ -26,18 +25,6 @@ public class Wardrobe {
 		this.setTemp1(temp1);
 		this.setTemp3(temp3);
 		this.setTemp4(temp4);
-	}
-	
-	/**
-	 * Second Wardrobe constructor with description
-	 * and upload image url
-	 * 
-	 * @param String name - Description of clothing
-	 * @param String image - image url
-	 */
-	public Wardrobe(String name, String image) {
-		this.name = name;
-		this.imageFileName = image;
 	}
 
 	
