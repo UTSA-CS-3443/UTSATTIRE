@@ -118,7 +118,7 @@ public class Add {
 		File f = c.showOpenDialog(null);
 		
 		//create new file with clothing and index in name
-		File f1 = new File("src/Resource/" + "clothing" + Integer.toString(count) + ".png");
+		File f1 = new File("src/Resource/" + clothing + Integer.toString(count) + ".png");
 		
 		//Copy into folder
 		try {

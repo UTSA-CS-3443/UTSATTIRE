@@ -39,6 +39,8 @@ public class AddController
 	@FXML
 	CheckBox eightyPlus, sevNineToSixFive, sixFourToFifOne, fiftyBelow;
 	
+	private boolean[] tempChecked = new boolean[4];
+	
 	@FXML
 	Button save;
 	
@@ -61,6 +63,24 @@ public class AddController
 		//When user clicks save button
 		if(event.getSource() == save) {
 			
+			//Update Temperature info. 
+			if(eightyPlus.isSelected() == true)
+			{
+				tempChecked[0] = true;
+			}
+			else if(sevNineToSixFive.isSelected() == true)
+			{
+				tempChecked[1] = true;
+			}
+			else if(sixFourToFifOne.isSelected() == true)
+			{
+				tempChecked[2] = true;
+			}
+			else if(fiftyBelow.isSelected() == true)
+			{
+				tempChecked[3] = true;
+			}
+
 			//check if user is adding a top, bottom, or shoe when saving. 
 			//Saves data, and then comes back to Wardrobe page
 			
