@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import application.Main;
-import application.model.Wardrobe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,11 +13,11 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * WardrobeController class that controls the wardrobe fxml
  * 
  * @author members of Team Dragon
  *
  */
-
 public class WardrobeController implements Initializable {
 	
 	@FXML
