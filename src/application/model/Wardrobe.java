@@ -10,25 +10,36 @@ package application.model;
 public class Wardrobe {
 	
 	private String name, imageFileName; 
-	private boolean temp1,  temp2, temp3, temp4;
+	private boolean temp1 = false,  temp2 = false, temp3 = false, temp4 = false;
 	
 	/**
 	 * Wardrobe constructor 
 	 * 
 	 * @param String name - Description of clothing
 	 */
-	public Wardrobe(String name,  String imageFileName,boolean temp1, boolean temp2, boolean temp3, boolean temp4)
+	public Wardrobe(String name,  String imageFileName, boolean t1, boolean t2, boolean t3, boolean t4)
 	{
 		this.name = name;
 		this.imageFileName = imageFileName;
-		this.setTemp2(temp2);
-		this.setTemp1(temp1);
-		this.setTemp3(temp3);
-		this.setTemp4(temp4);
+		this.setTemp1(t1);
+		this.setTemp2(t2);
+		this.setTemp3(t3);
+		this.setTemp4(t4);
+		
 	}
+	
+	/**
+	 * Wardrobe constructor 
+	 * 
+	 * @param String name - Description of clothing
+	 */
+	public Wardrobe(String name,  String imageFileName)
+	{
+		this.name = name;
+		this.imageFileName = imageFileName;
+	}
+	
 
-	
-	
 	
 	//Getters and Setters
 	public String getName() {
@@ -49,7 +60,7 @@ public class Wardrobe {
 
 
 
-	public boolean isTemp1() {
+	public boolean getTemp1() {
 		return temp1;
 	}
 
@@ -57,7 +68,7 @@ public class Wardrobe {
 		this.temp1 = temp1;
 	}
 
-	public boolean isTemp2() {
+	public boolean getTemp2() {
 		return temp2;
 	}
 
@@ -65,7 +76,7 @@ public class Wardrobe {
 		this.temp2 = temp2;
 	}
 
-	public boolean isTemp3() {
+	public boolean getTemp3() {
 		return temp3;
 	}
 
@@ -73,14 +84,12 @@ public class Wardrobe {
 		this.temp3 = temp3;
 	}
 
-	public boolean isTemp4() {
+	public boolean getTemp4() {
 		return temp4;
 	}
 
 	public void setTemp4(boolean temp4) {
 		this.temp4 = temp4;
 	}
-	
-	
 }
 
