@@ -75,7 +75,7 @@ public class Add {
 		{
 			//then add new Wardrobe to arraylist
 			try {
-				PrintWriter pw = new PrintWriter(new File("Bottom.csv"));
+				PrintWriter pw = new PrintWriter(new FileOutputStream(new File("Bottom.csv"),true));
 				StringBuilder sb = new StringBuilder();
 				sb.append(input);
 				sb.append(",");
@@ -104,7 +104,7 @@ public class Add {
 			{
 				//then add new Wardrobe to arraylist
 				try {
-					PrintWriter pw = new PrintWriter(new File("Shoes.csv"));
+					PrintWriter pw = new PrintWriter(new FileOutputStream(new File("Shoes.csv"),true));
 					StringBuilder sb = new StringBuilder();
 					sb.append(input);
 					sb.append(",");

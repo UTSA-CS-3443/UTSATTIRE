@@ -29,8 +29,8 @@ public class EditController
 	
 	
 	private ArrayList<String> top = new ArrayList<String>();
-	private ArrayList<Wardrobe> bottom = new ArrayList<Wardrobe>();
-	private ArrayList<Wardrobe> shoe = new ArrayList<Wardrobe>();
+	private ArrayList<String> bottom = new ArrayList<String>();
+	private ArrayList<String> shoe = new ArrayList<String>();
 	
 	public void populate() throws FileNotFoundException
 	{
@@ -45,16 +45,29 @@ public class EditController
 		}
 		inputStream.close();
 
-		File file = new File("Bottoms.csv");
-		Scanner inputStream = new Scanner(file);
+		File file1 = new File("Bottom.csv");
+		Scanner inputStream1 = new Scanner(file1);
 		System.out.println("Before reading file");
-		while(inputStream.hasNextLine())
+		while(inputStream1.hasNextLine())
 		{
-			String data = inputStream.nextLine();
+			String data = inputStream1.nextLine();
 			String[] info = data.split(",");
-			top.add(info[0]);
+			bottom.add(info[0]);
 		}
-		inputStream.close();
+		inputStream1.close();
+		
+		File file2 = new File("Shoes.csv");
+		Scanner inputStream2 = new Scanner(file2);
+		System.out.println("Before reading file");
+		while(inputStream2.hasNextLine())
+		{
+			String data = inputStream2.nextLine();
+			String[] info = data.split(",");
+			shoe.add(info[0]);
+		}
+		inputStream2.close();
+		
+		
 	}
 		
 	@FXML
@@ -65,7 +78,13 @@ public class EditController
 		
 		ObservableList<String> history = FXCollections.observableArrayList(
 				top);
+		ObservableList<String> history1 = FXCollections.observableArrayList(
+				bottom);
+		ObservableList<String> history2 = FXCollections.observableArrayList(
+				shoe);
 		tops.setItems(history);
+		bottoms.setItems(history1);
+		shoes.setItems(history2);
 		
 	}
 	

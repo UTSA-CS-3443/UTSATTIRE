@@ -123,7 +123,7 @@ public class AddController
 			else if(WardrobeController.clothingTier == "shoe")
 			{
 			
-				String tier = "top";
+				String tier = "shoe";
 				
 				//Call addTop method
 				Add.addClothing(tier, userInput.getText(), tempChecked);
