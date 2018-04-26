@@ -1,7 +1,10 @@
 package application.model;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.ArrayList;
 
@@ -19,12 +22,8 @@ import javafx.stage.FileChooser.ExtensionFilter;
  */
 public class Add {
 
-	private static ArrayList<Wardrobe> Top, Bottom, Shoe;
-	
 	//String variables for holding names of uploaded image
-	private static String topName = "", botName = "", shoeName = "";
-	
-
+	private static String clothingURL = "";
 
 	/**
 	 *Constructor for Add class
@@ -39,65 +38,96 @@ public class Add {
 	 * @param String input - String for description of clothing
 	 * @param boolean upload - boolean if user uploaded image
 	 */
-	public static void addTop(String input, boolean upload)
+	public static void addClothing(String tier, String input, boolean[] temp)
 	{
-		//check if user uploaded an image or not
-		//then add new Wardrobe to arraylist
-		if(upload == true)
+		//top
+		if(tier.equals("top"))
 		{
-			Wardrobe top = new Wardrobe(input, topName);
-			Top.add(top);
+			//then add new Wardrobe to arraylist
+			try {
+				PrintWriter pw = new PrintWriter(new File("Top.csv"));
+				StringBuilder sb = new StringBuilder();
+				sb.append(input);
+				sb.append(",");
+				sb.append(clothingURL);
+				
+				for(int i = 0; i < temp.length; i++)
+				{
+					sb.append(",");
+					
+					if(temp[i] == true)
+						sb.append("true");
+					else
+						sb.append("false");
+				}
+				sb.append("\n");
+				
+				pw.write(sb.toString());
+				pw.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		else
+		//bottom
+		else if(tier.equals("bottom"))
 		{
-			Wardrobe top = new Wardrobe(input);
-			Top.add(top);
+			//then add new Wardrobe to arraylist
+			try {
+				PrintWriter pw = new PrintWriter(new File("Bottom.csv"));
+				StringBuilder sb = new StringBuilder();
+				sb.append(input);
+				sb.append(",");
+				sb.append(clothingURL);
+				
+				for(int i = 0; i < temp.length; i++)
+				{
+					sb.append(",");
+					
+					if(temp[i] == true)
+						sb.append("true");
+					else
+						sb.append("false");
+				}
+				sb.append("\n");
+				
+				pw.write(sb.toString());
+				pw.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-	}
-	
-	/**
-	 * Add method for Bottom
-	 * 
-	 * @param String input - String for description of clothing
-	 * @param boolean upload - boolean if user uploaded image
-	 */
-	public static void addBottom(String input, boolean upload)
-	{
-		//check if user uploaded an image or not
-		//then add new Wardrobe to arraylist
-		if(upload == true)
-		{
-			Wardrobe bottom = new Wardrobe(input, botName);
-			Bottom.add(bottom);
+			//shoe
+			else if(tier.equals("shoe"))
+			{
+				//then add new Wardrobe to arraylist
+				try {
+					PrintWriter pw = new PrintWriter(new File("Shoes.csv"));
+					StringBuilder sb = new StringBuilder();
+					sb.append(input);
+					sb.append(",");
+					sb.append(clothingURL);
+					
+					for(int i = 0; i < temp.length; i++)
+					{
+						sb.append(",");
+						
+						if(temp[i] == true)
+							sb.append("true");
+						else
+							sb.append("false");
+					}
+					sb.append("\n");
+					
+					pw.write(sb.toString());
+					pw.close();
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
-		else
-		{
-			Wardrobe bottom = new Wardrobe(input);
-			Bottom.add(bottom);
-		}
-	}
-	
-	/**
-	 * Add method for Shoe
-	 * 
-	 * @param String input - String for description of clothing
-	 * @param boolean upload - boolean if user uploaded image
-	 */
-	public static void addShoe(String input, boolean upload)
-	{
-		//check if user uploaded an image or not
-		//then add new Wardrobe to arraylist
-		if(upload == true)
-		{
-			Wardrobe shoe = new Wardrobe(input, shoeName);
-			Shoe.add(shoe);
-		}
-		else
-		{
-			Wardrobe shoe = new Wardrobe(input);
-			Shoe.add(shoe);
-		}
-	}
 	
 	
 	/**
@@ -107,7 +137,7 @@ public class Add {
 	 * @param clothing - string for cloth tier
 	 * @param count - index
 	 */
-	public static void addImage(String clothing, int count)
+	public static void addImage()
 	{
 		FileChooser c = new FileChooser();
 		
@@ -118,7 +148,7 @@ public class Add {
 		File f = c.showOpenDialog(null);
 		
 		//create new file with clothing and index in name
-		File f1 = new File("src/Resource/" + clothing + Integer.toString(count) + ".png");
+		File f1 = new File("src/Resource/" + f.getName());
 		
 		//Copy into folder
 		try {
@@ -132,39 +162,15 @@ public class Add {
 		
 		
 		//update appropriate String variable of clothing url name
-		if(clothing.equals("top"))
-			topName = "src/Resource/" + "clothing" + Integer.toString(count) + ".png";
-		else if(clothing.equals("bottom"))
-			botName = "src/Resource/" + "clothing" + Integer.toString(count) + ".png";
-		else if(clothing.equals("shoe"))
-			shoeName = "src/Resource/" + "clothing" + Integer.toString(count) + ".png";
+		clothingURL = f1.getName();
 		
 	}
 	
 	
 	
 	//Getters and Setters
-	public static String getTopName() {
-		return topName;
+	public static String getImageURL() {
+		return clothingURL;
 	}
 
-	public static void setTopName(String topName) {
-		Add.topName = topName;
-	}
-
-	public static String getBotName() {
-		return botName;
-	}
-
-	public static void setBotName(String botName) {
-		Add.botName = botName;
-	}
-
-	public static String getShoeName() {
-		return shoeName;
-	}
-
-	public static void setShoeName(String shoeName) {
-		Add.shoeName = shoeName;
-	}
 }

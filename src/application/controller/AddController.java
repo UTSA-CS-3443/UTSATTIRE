@@ -44,12 +44,6 @@ public class AddController
 	@FXML
 	Button save;
 	
-	//count for when user uploads an image
-	private int topCount = 0, bottomCount = 0, shoeCount = 0;
-	
-	//boolean for when user uploads an image
-	private boolean topUpload = false, bottomUpload = false, shoeUpload = false;
-	
 	/**
 	 * buttonClicked method when user clicks save button,
 	 * saves data into wardrobe arraylist
@@ -87,14 +81,12 @@ public class AddController
 			//top
 			if(WardrobeController.clothingTier == "top")
 			{
+				String tier = "top";
+				
 				//Call addTop method
-				Add.addTop(userInput.getText(), topUpload);
+				Add.addClothing(tier, userInput.getText(), tempChecked);
 				
-				//increment count for top since done. 
-				topCount++;
-				
-				//reset topUpload
-				topUpload = false;
+
 				
 				
 				//change scene to Wardrobe fxml
@@ -110,14 +102,11 @@ public class AddController
 			//bottom
 			else if(WardrobeController.clothingTier == "bottom")
 			{
+				String tier = "bottom";
+				
 				//Call addBottom method
-				Add.addBottom(userInput.getText(), bottomUpload);
-				
-				//increment count for top since done. 
-				bottomCount++;
-				
-				//reset bottomUpload
-				bottomUpload = false;
+				Add.addClothing(tier, userInput.getText(), tempChecked);
+			
 				
 				
 				//change scene to Wardrobe fxml
@@ -134,14 +123,11 @@ public class AddController
 			else if(WardrobeController.clothingTier == "shoe")
 			{
 			
+				String tier = "top";
+				
 				//Call addTop method
-				Add.addShoe(userInput.getText(), shoeUpload);
+				Add.addClothing(tier, userInput.getText(), tempChecked);
 				
-				//increment count for top since done. 
-				shoeCount++;
-				
-				//reset shoeUpload
-				shoeUpload = false;
 				
 				
 				//change scene to Wardrobe fxml
@@ -164,23 +150,7 @@ public class AddController
 	@FXML
 	public void chooseImage(ActionEvent event)
 	{
-		//Check if user is in top, bottom, or shoe, 
-		//upload image with according name,
-		//and update appropriate boolean to "true"
-		if(WardrobeController.clothingTier == "top")
-		{
-			Add.addImage("top", topCount);
-			topUpload = true;
-		}
-		else if(WardrobeController.clothingTier == "bottom")
-		{
-			Add.addImage("bottom", bottomCount);
-			bottomUpload = true;
-		}
-		else if(WardrobeController.clothingTier == "shoe")
-		{
-			Add.addImage("shoe", shoeCount);
-			shoeUpload = true;
-		}
+		//Call addImage method
+		Add.addImage();
 	}
 }
