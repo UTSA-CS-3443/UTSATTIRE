@@ -44,6 +44,17 @@ public class EditController
 			top.add(info[0]);
 		}
 		inputStream.close();
+
+		File file = new File("Bottoms.csv");
+		Scanner inputStream = new Scanner(file);
+		System.out.println("Before reading file");
+		while(inputStream.hasNextLine())
+		{
+			String data = inputStream.nextLine();
+			String[] info = data.split(",");
+			top.add(info[0]);
+		}
+		inputStream.close();
 	}
 		
 	@FXML
