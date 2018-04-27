@@ -1,5 +1,8 @@
 package application.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,15 +24,20 @@ public class DailyWeather {
 	double tempMax;
 	String forecast;
 	String icon;
-	String date;
+	Integer date;
 	
 	
 	public  DailyWeather(JSONObject weatherobj){
+		//System.out.println("--------------------");
+		
+		//System.out.println(weatherobj);
+		
+		
+		
 		try {
 		JSONObject weatherObject = (JSONObject) ((JSONArray)weatherobj.get("weather")).get(0);
 		
 		JSONObject main = ((JSONObject) weatherobj.get("main"));
-		
 		
 		//setters
 		this.setIcon((String) weatherObject.get("icon"));
@@ -37,10 +45,12 @@ public class DailyWeather {
 		this.setTemp((double) main.get("temp"));
 		this.setTempMin((double) main.get("temp_min"));
 		this.setTempMax((double) main.get("temp_max"));
+		this.setDate((Integer)weatherobj.get("dt"));
 		
-		System.out.println("Temp Max:" + this.getTempMax());
-		System.out.println("Temp min:" + this.getTempMin());
-		System.out.println(this.getForecast());
+		
+		//System.out.println(main.get("temp_min"));
+		//System.out.println(main.get("temp_max"));
+		//System.out.println("--------------------");
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -64,12 +74,21 @@ public class DailyWeather {
 	 * @return the date
 	 */
 	public String getDate() {
-		return date;
+
+		Integer i = this.date;
+		Long l = new Long(i)*1000;
+        Date date = new Date(l);
+        DateFormat format = new SimpleDateFormat("EEEE");
+        String formatted = format.format(date);
+        System.out.println(formatted);
+        formatted = format.format(date);
+
+		return formatted;
 	}
 	/**
 	 * @param date the date to set
 	 */
-	public void setDate(String date) {
+	public void setDate(Integer date) {
 		this.date = date;
 	}
 	/**
