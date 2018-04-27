@@ -33,9 +33,10 @@ public class OutfitGenController {
 	@FXML
 	public void initialize() {
 		
+
 		//Create Outfit object
 		Outfit temp = new Outfit();
-		
+
 //Upload Outfit images--------------------------------------------------------
 		//input image file for top
 		FileInputStream input;
@@ -72,11 +73,11 @@ public class OutfitGenController {
 		}
 //-------------------------------------------------------------
 		
+
 		//Update labels of each clothing
 		topName.setText(temp.getTopName());
 		bottomName.setText(temp.getBottomName());
 		shoeName.setText(temp.getShoeName());
-		
 	}
 	
 	@FXML

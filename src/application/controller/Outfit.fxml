@@ -51,17 +51,17 @@
       </Label>
       <ImageView fx:id="topImage" fitHeight="200.0" fitWidth="138.0" layoutX="572.0" layoutY="76.0">
          <image>
-            <Image url="@/Resource/RVCA_tank_top.jpg" />
+            <Image url="@/Resource/White.png" />
          </image>
       </ImageView>
       <ImageView fx:id="shoeImage" fitHeight="151.0" fitWidth="151.0" layoutX="565.0" layoutY="514.0">
          <image>
-            <Image url="@/Resource/nike_shoes.jpg" />
+            <Image url="@/Resource/White.png" />
          </image>
       </ImageView>
       <ImageView fx:id="bottomImage" fitHeight="190.0" fitWidth="190.0" layoutX="546.0" layoutY="305.0">
          <image>
-            <Image url="@/Resource/mens-destructed-light-wash-skinny-slim-jeans-product.jpg" />
+            <Image url="@/Resource/White.png" />
          </image>
       </ImageView>
    </children>

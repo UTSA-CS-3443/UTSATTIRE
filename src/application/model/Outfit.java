@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-
 public class Outfit {
 	
 	private static ArrayList<Wardrobe> Top, Bottom, Shoe;
@@ -25,7 +21,7 @@ public class Outfit {
 		//Fill in ArrayList-----------------------------------------------------------------------------------
 		
 		//Create Top outfit
-		File file = new File("Top.csv");
+		File file = new File("/UTSAttire/Top.csv");
 		Scanner inputStream;
 		
 		try {
@@ -73,7 +69,7 @@ public class Outfit {
 		
 		
 		//Create Bottom outfit
-		file = new File("Bottom.csv");
+		file = new File("/UTSAttire/Bottom.csv");
 		
 		try {
 			
@@ -118,7 +114,7 @@ public class Outfit {
 			}
 		
 		//Create Shoe outfit
-		file = new File("Shoes.csv");
+		file = new File("/UTSAttire/Shoes.csv");
 		
 		try {
 			
@@ -186,8 +182,9 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-		
+			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			int index = 0;
+			
 			//Temp Wardrobe
 			Wardrobe temp = Top.get(index);
 			
@@ -199,7 +196,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
@@ -207,7 +203,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else if(temperature < 65 && temperature > 50 )
 			{
@@ -215,7 +210,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else
 			{
@@ -223,7 +217,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 		}
 		return null;
@@ -241,8 +234,8 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-		
+			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+				int index = 0;
 			//Temp Wardrobe
 			Wardrobe temp = Bottom.get(index);
 			
@@ -254,7 +247,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
@@ -262,7 +254,7 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
+
 			}
 			else if(temperature < 65 && temperature > 50 )
 			{
@@ -270,7 +262,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else
 			{
@@ -278,7 +269,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 		}
 		return null;
@@ -296,8 +286,9 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-		
+			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			int index = 0;
+			
 			//Temp Wardrobe
 			Wardrobe temp = Shoe.get(index);
 			
@@ -309,7 +300,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
@@ -317,7 +307,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else if(temperature < 65 && temperature > 50 )
 			{
@@ -325,7 +314,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 			else
 			{
@@ -333,7 +321,6 @@ public class Outfit {
 					return temp;
 				//Stop loop
 				loop = false;
-				break;
 			}
 		}
 		return null;
