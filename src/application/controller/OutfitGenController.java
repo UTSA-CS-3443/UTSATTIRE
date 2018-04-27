@@ -31,12 +31,12 @@ public class OutfitGenController {
 	private Label topName, bottomName, shoeName;
 	
 	@FXML
-	public void initialize() {
+	public void initialize(){
 		
 
 		//Create Outfit object
 		Outfit temp = new Outfit();
-		/*
+
 //Upload Outfit images--------------------------------------------------------
 		//input image file for top
 		FileInputStream input;
@@ -49,7 +49,7 @@ public class OutfitGenController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		/*
 		//input image file for bottom
 		try {
 			input = new FileInputStream(temp.getBottomURL());

@@ -8,33 +8,34 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Outfit {
 	
-	private static ArrayList<Wardrobe> Top, Bottom, Shoe;
+	private static ArrayList<Wardrobe> Top = new ArrayList<Wardrobe>(), Bottom = new ArrayList<Wardrobe>(), Shoe = new ArrayList<Wardrobe>();
 	
 	private double temperature;
 	
 	/**
 	 * Outfit Constructor
 	 * Sets up ArrayList and current Temperature
+	 * @throws FileNotFoundException 
 	 */
 	public Outfit()
 	{
 		//Fill in ArrayList-----------------------------------------------------------------------------------
 		
 		//Create Top outfit
-		File file = new File("/UTSAttire/Top.csv");
+		File file = new File("Top.csv");
 		Scanner inputStream;
-		
+
 		try {
 			
 			inputStream = new Scanner(file);
 
-			System.out.println("Before reading file");
 			while(inputStream.hasNextLine())
 			{
-				
+
 				String data = inputStream.nextLine();
+
 				String[] info = data.split(",");
-				
+
 				//Create Wardrobe for top
 				Wardrobe top = new Wardrobe(info[0], info[1]);
 				
@@ -56,8 +57,9 @@ public class Outfit {
 								break;	
 					}
 				}
-				
 				Top.add(top);
+				
+				
 			}
 			inputStream.close();
 			
@@ -66,16 +68,15 @@ public class Outfit {
 			e.printStackTrace();
 		}
 		
-		
+
 		
 		//Create Bottom outfit
-		file = new File("/UTSAttire/Bottom.csv");
+		file = new File("Bottom.csv");
 		
 		try {
 			
 			inputStream = new Scanner(file);
 
-			System.out.println("Before reading file");
 			while(inputStream.hasNextLine())
 			{
 				
@@ -114,13 +115,12 @@ public class Outfit {
 			}
 		
 		//Create Shoe outfit
-		file = new File("/UTSAttire/Shoes.csv");
+		file = new File("Shoes.csv");
 		
 		try {
 			
 			inputStream = new Scanner(file);
 
-			System.out.println("Before reading file");
 			while(inputStream.hasNextLine())
 			{
 				
@@ -157,11 +157,12 @@ public class Outfit {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		//--------------------------------------------------------------------------------------------------
 		
 		//Get current temperature
 		temperature = (FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(0).getTemp()));
-		
+			
 	}
 	
 	
