@@ -34,17 +34,17 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="topName" layoutX="834.0" layoutY="141.0" text="RVCA Tank Top" textFill="#e85b25">
+      <Label fx:id="topName" layoutX="834.0" layoutY="141.0" text="Blank" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="bottomName" layoutX="864.0" layoutY="365.0" text="Denim Jeans" textFill="#e85b25">
+      <Label fx:id="bottomName" layoutX="864.0" layoutY="365.0" text="Blank" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="shoeName" layoutX="831.0" layoutY="554.0" text="Red Nike Shoes" textFill="#e85b25">
+      <Label fx:id="shoeName" layoutX="831.0" layoutY="554.0" text="Blank" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>

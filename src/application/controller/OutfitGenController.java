@@ -33,10 +33,10 @@ public class OutfitGenController {
 	@FXML
 	public void initialize() {
 		
-/*
+
 		//Create Outfit object
 		Outfit temp = new Outfit();
-
+		/*
 //Upload Outfit images--------------------------------------------------------
 		//input image file for top
 		FileInputStream input;
