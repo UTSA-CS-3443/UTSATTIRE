@@ -30,5 +30,6 @@
       <CheckBox fx:id="sevNineToSixFive" layoutX="110.0" layoutY="578.0" mnemonicParsing="false" text="79° - 65°" textFill="#e85b25" />
       <CheckBox fx:id="sixFourToFifOne" layoutX="110.0" layoutY="607.0" mnemonicParsing="false" text="64° - 51°" textFill="#e85b25" />
       <CheckBox fx:id="fiftyBelow" layoutX="110.0" layoutY="636.0" mnemonicParsing="false" text="50-°" textFill="#e85b25" />
+      <Button layoutX="1101.0" layoutY="641.0" mnemonicParsing="false" onAction="#handleDelete" style="-fx-background-color: #E85B25;" text="Delete" />
    </children>
 </AnchorPane>

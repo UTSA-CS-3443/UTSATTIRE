@@ -1,12 +1,14 @@
 package application.controller;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,7 +22,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
@@ -108,6 +109,88 @@ public class EditController
 		
 		
 	}
+	public void delete(String file, String getRidOf) throws IOException
+	{
+		try {
+
+		      File inFile = new File(file);
+
+		      if (!inFile.isFile()) {
+		        System.out.println("Parameter is not an existing file");
+		        return;
+		      }
+
+		      //Construct the new file that will later be renamed to the original filename.
+		      File tempFile = new File(inFile.getAbsolutePath() + ".tmp");
+
+		      BufferedReader br = new BufferedReader(new FileReader(file));
+		      PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		      String line = null;
+
+		      //Read from the original file and write to the new
+		      //unless content matches data to be removed.
+		      while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(getRidOf)) {
+
+		          pw.println(line);
+		          pw.flush();
+		        }
+		      }
+		      pw.close();
+		      br.close();
+
+		      //Delete the original file
+		      if (!inFile.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		      }
+
+		      //Rename the new file to the filename the original file had.
+		      if (!tempFile.renameTo(inFile))
+		        System.out.println("Could not rename file");
+
+		    }
+		    catch (FileNotFoundException ex) {
+		      ex.printStackTrace();
+		    }
+		    catch (IOException ex) {
+		      ex.printStackTrace();
+		    }
+	}
+	@FXML
+	public void handleDelete(ActionEvent event) throws IOException
+	{
+		if(tops.getSelectionModel().getSelectedItem() != null && bottoms.getSelectionModel().getSelectedItem() == null && shoes.getSelectionModel().getSelectedItem() == null)
+		{
+			for(int i=0; i < top.size();i++)
+			{
+				//System.out.println("---------------------" + topInfo.get(i).getImageFileName());
+				//System.out.println(tops.getSelectionModel().getSelectedItem() + "-----------------------");
+				
+				if(topInfo.get(i).getName().equals(tops.getSelectionModel().getSelectedItem()))
+				{
+					
+					delete("Top.csv",topInfo.get(i).getName()+","+topInfo.get(i).getImageFileName() + "," + topInfo.get(i).getTemp1() + "," + topInfo.get(i).getTemp2() + "," + topInfo.get(i).getTemp3
+		            		() + "," + topInfo.get(i).getTemp4());
+					 
+					
+				}
+			}
+			
+		}
+		if(bottoms.getSelectionModel().getSelectedItem() != null && tops.getSelectionModel().getSelectedItem() == null && shoes.getSelectionModel().getSelectedItem() == null)
+		{
+			
+			
+		}
+		if(shoes.getSelectionModel().getSelectedItem() != null && tops.getSelectionModel().getSelectedItem() == null && bottoms.getSelectionModel().getSelectedItem() == null)
+		{
+			
+		}
+		handleRefresh();
+	}
 	@FXML
 	public void handle(ActionEvent event) throws IOException
 	{
@@ -159,7 +242,7 @@ public class EditController
 		
 		if(fiftyBelow.isSelected() == true)
 			tempChecked[3] = true;
-		//System.out.println(topInfo);
+		
 		
 		
 		if(tops.getSelectionModel().getSelectedItem() != null && bottoms.getSelectionModel().getSelectedItem() == null && shoes.getSelectionModel().getSelectedItem() == null)
@@ -282,6 +365,17 @@ public class EditController
 	    sevNineToSixFive.setSelected(false);
 	    sixFourToFifOne.setSelected(false);
 	    fiftyBelow.setSelected(false);
+	    if(eightyPlus.isSelected() == false)
+			tempChecked[0] = false;
+		
+		if(sevNineToSixFive.isSelected() == false)
+			tempChecked[1] = false;
+		
+		if(sixFourToFifOne.isSelected() == false)
+			tempChecked[2] = false;
+		
+		if(fiftyBelow.isSelected() == false)
+			tempChecked[3] = false;
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("Edit.fxml"));
 		rootPane.getChildren().setAll(pane);
 	}
