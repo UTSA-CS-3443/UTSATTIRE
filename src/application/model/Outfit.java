@@ -183,8 +183,8 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-			int index = 0;
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			//int index = 0;
 			
 			//Temp Wardrobe
 			Wardrobe temp = Top.get(index);
@@ -235,8 +235,8 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-				int index = 0;
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+				//int index = 0;
 			//Temp Wardrobe
 			Wardrobe temp = Bottom.get(index);
 			
@@ -287,8 +287,8 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			//int index = ThreadLocalRandom.current().nextInt(0, Top.size());
-			int index = 0;
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			//int index = 1;
 			
 			//Temp Wardrobe
 			Wardrobe temp = Shoe.get(index);
@@ -338,7 +338,7 @@ public class Outfit {
 	public String getTopURL()
 	{
 		Wardrobe temp = getTodayTop();
-		return "src/Resource/" + temp.getImageFileName();
+		return  temp.getImageFileName();
 	}
 	
 	/**
@@ -348,7 +348,7 @@ public class Outfit {
 	public String getBottomURL()
 	{
 		Wardrobe temp = getTodayBottom();
-		return "src/Resource/" + temp.getImageFileName();
+		return temp.getImageFileName();
 	}
 	
 	/**
@@ -358,7 +358,7 @@ public class Outfit {
 	public String getShoeURL()
 	{
 		Wardrobe temp = getTodayShoe();
-		return "src/Resource/" + temp.getImageFileName();
+		return  temp.getImageFileName();
 	}
 	
 	/**
