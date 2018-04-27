@@ -32,8 +32,7 @@ public class FiveDayForecast {
 		
 		String endpoint  = "http://api.openweathermap.org/data/2.5/forecast?zip=78023,us&appid=c457ac9a917181dbe62eba28722659c0";
     	String jObjString = ApiUtility.callAPI(endpoint);
-    	//ArrayList<DailyWeather> forecast = new ArrayList<DailyWeather>();
-    	//System.out.println(jObjString);
+
     	System.out.println("----------------------------------------------");
     	// for each day call api create object and set;
     	try {
@@ -41,10 +40,7 @@ public class FiveDayForecast {
 			JSONObject responseObj = new JSONObject(jObjString);
 			JSONArray weatherList = (JSONArray)responseObj.get("list");
 			
-			
-			//System.out.println(weatherList);
-			
-			for(int i = 3; i<weatherList.length();i++) {
+			for(int i = 0; i<weatherList.length();i++) {
 				DailyWeather test = new DailyWeather((JSONObject)weatherList.get(i));
 								
 				forecast.add(test);

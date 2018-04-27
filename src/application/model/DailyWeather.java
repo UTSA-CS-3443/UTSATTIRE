@@ -48,9 +48,7 @@ public class DailyWeather {
 		this.setDate((Integer)weatherobj.get("dt"));
 		
 		
-		//System.out.println(main.get("temp_min"));
-		//System.out.println(main.get("temp_max"));
-		//System.out.println("--------------------");
+		System.out.println(main.get("dt_date"));
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
