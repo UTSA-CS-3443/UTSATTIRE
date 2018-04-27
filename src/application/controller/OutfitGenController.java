@@ -1,5 +1,6 @@
 package application.controller;
  
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -36,12 +37,13 @@ public class OutfitGenController {
 
 		//Create Outfit object
 		Outfit temp = new Outfit();
-
+		temp.populateOutfit();
 //Upload Outfit images--------------------------------------------------------
 		//input image file for top
 		FileInputStream input;
 		try {
-			input = new FileInputStream(temp.getTopURL());
+			String fileName = "src/Resource/" + temp.getTopURL();
+			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			topImage.setImage(image);
 			//topName.setText(temp.getTopName());
@@ -53,7 +55,8 @@ public class OutfitGenController {
 		
 		//input image file for bottom
 		try {
-			input = new FileInputStream(temp.getBottomURL());
+			String fileName = "src/Resource/" + temp.getBottomURL();
+			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			bottomImage.setImage(image);
 			//bottomName.setText(temp.getTopName());
@@ -65,7 +68,8 @@ public class OutfitGenController {
 		
 		//input image file for shoe
 		try {
-			input = new FileInputStream(temp.getShoeURL());
+			String fileName = "src/Resource/" + temp.getShoeURL();
+			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			shoeImage.setImage(image);
 			//shoeName.setText(temp.getTopName());
@@ -107,12 +111,13 @@ public class OutfitGenController {
 			System.out.println("--------Should Generate");
 			FileInputStream input;
 			try {
-				input = new FileInputStream(temp.getTopURL());
+				
+				
+				String fileName = "src/Resource/" + temp.getTopURL();
+				input = new FileInputStream(new File(fileName));
 				Image image = new Image(input);
 				topImage.setImage(image);
-				//System.out.println(temp.getTopName());
-				//topName.setText(temp.getTopName());
-				//System.out.println(topName.getText());
+			
 			}
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -121,7 +126,8 @@ public class OutfitGenController {
 			
 			//input image file for bottom
 			try {
-				input = new FileInputStream(temp.getBottomURL());
+				String fileName = "src/Resource/" + temp.getBottomURL();
+				input = new FileInputStream(new File(fileName));
 				Image image = new Image(input);
 				bottomImage.setImage(image);
 				//bottomName.setText(temp.getTopName());
@@ -132,8 +138,10 @@ public class OutfitGenController {
 			}
 			
 			//input image file for shoe
+			
 			try {
-				input = new FileInputStream(temp.getShoeURL());
+				String fileName = "src/Resource/" + temp.getShoeURL();
+				input = new FileInputStream(new File(fileName));
 				Image image = new Image(input);
 				shoeImage.setImage(image);
 				//shoeName.setText(temp.getTopName());

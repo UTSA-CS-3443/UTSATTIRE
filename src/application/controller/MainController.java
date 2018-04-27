@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import application.Main;
 import application.model.FiveDayForecast;
+import application.model.Outfit;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

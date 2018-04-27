@@ -50,7 +50,7 @@ public class Wardrobe {
 
 	public String getImageFileName() 
 	{
-		return "src/Resource/" + imageFileName;
+		return  imageFileName;
 	}
 
 	public void setImageFileName(String imageFileName) {

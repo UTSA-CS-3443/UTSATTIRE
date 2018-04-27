@@ -8,7 +8,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Outfit {
 	
-	private static ArrayList<Wardrobe> Top = new ArrayList<Wardrobe>(), Bottom = new ArrayList<Wardrobe>(), Shoe = new ArrayList<Wardrobe>();
+	public static ArrayList<Wardrobe> Top = new ArrayList<Wardrobe>();
+
+	private static ArrayList<Wardrobe> Bottom = new ArrayList<Wardrobe>();
+
+	private static ArrayList<Wardrobe> Shoe = new ArrayList<Wardrobe>();
 	
 	private double temperature;
 	
@@ -19,6 +23,13 @@ public class Outfit {
 	 */
 	public Outfit()
 	{
+			
+	}
+	
+	public void populateOutfit() {
+		Top.clear();
+		Bottom.clear();
+		Shoe.clear();
 		//Fill in ArrayList-----------------------------------------------------------------------------------
 		
 		//Create Top outfit
@@ -37,9 +48,9 @@ public class Outfit {
 				String[] info = data.split(",");
 
 				//Create Wardrobe for top
-				Wardrobe top = new Wardrobe(info[0], info[1]);
+				Wardrobe top = new Wardrobe(info[0], info[1],Boolean.valueOf(info[2]), Boolean.valueOf(info[3]), Boolean.valueOf(info[4]), Boolean.valueOf(info[5]));
 				
-				for(int i = 2; i < info.length; i++)
+			/*	for(int i = 2; i < info.length; i++)
 				{
 					switch(i)
 					{
@@ -56,7 +67,8 @@ public class Outfit {
 									top.setTemp4(true);
 								break;	
 					}
-				}
+				}*/
+				
 				Top.add(top);
 				
 				
@@ -84,9 +96,9 @@ public class Outfit {
 				String[] info = data.split(",");
 				
 				//Create Wardrobe for Bottom
-				Wardrobe bottom = new Wardrobe(info[0], info[1]);
+				Wardrobe bottom = new Wardrobe(info[0], info[1],Boolean.valueOf(info[2]), Boolean.valueOf(info[3]), Boolean.valueOf(info[4]), Boolean.valueOf(info[5]));
 				
-				for(int i = 2; i < info.length; i++)
+				/*for(int i = 2; i < info.length; i++)
 				{
 					switch(i)
 					{
@@ -103,9 +115,10 @@ public class Outfit {
 									bottom.setTemp4(true);
 								break;	
 					}
-				}
+				}*/
 				
 				Bottom.add(bottom);
+				
 			}
 			inputStream.close();
 			
@@ -128,9 +141,9 @@ public class Outfit {
 				String[] info = data.split(",");
 				
 				//Create Wardrobe for Shoe
-				Wardrobe shoe = new Wardrobe(info[0], info[1]);
+				Wardrobe shoe = new Wardrobe(info[0], info[1],Boolean.valueOf(info[2]), Boolean.valueOf(info[3]), Boolean.valueOf(info[4]), Boolean.valueOf(info[5]));
 				
-				for(int i = 2; i < info.length; i++)
+				/*for(int i = 2; i < info.length; i++)
 				{
 					switch(i)
 					{
@@ -147,9 +160,10 @@ public class Outfit {
 									shoe.setTemp4(true);
 								break;	
 					}
-				}
+				}*/
 				
 					Shoe.add(shoe);
+					
 			}
 			inputStream.close();
 			
@@ -162,10 +176,11 @@ public class Outfit {
 		
 		//Get current temperature
 		temperature = (FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(0).getTemp()));
-			
+		
+		
+		
+		
 	}
-	
-	
 	
 	//private static ArrayList<Wardrobe> Top, Bottom, Shoe;
 	//private double temperature;
@@ -183,7 +198,7 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size() -1);
 			//int index = 0;
 			
 			//Temp Wardrobe
@@ -200,6 +215,8 @@ public class Outfit {
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
+				System.out.println(temp.toString());
+				System.out.println("Should be the index: " + index+" "+ temp.getImageFileName());
 				if(temp.getTemp2() == true)
 					return temp;
 				//Stop loop
@@ -234,8 +251,9 @@ public class Outfit {
 		//Loop until gets appropriate Top
 		while(loop == true)
 		{
+			System.out.println(Top.size());
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size()-1);
 				//int index = 0;
 			//Temp Wardrobe
 			Wardrobe temp = Bottom.get(index);
@@ -287,7 +305,7 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size());
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size()-1);
 			//int index = 1;
 			
 			//Temp Wardrobe
@@ -337,7 +355,10 @@ public class Outfit {
 	 */
 	public String getTopURL()
 	{
+		System.out.println("Enter getTopURL: ");
 		Wardrobe temp = getTodayTop();
+		System.out.println("---------"+temp.getImageFileName() );
+		System.out.println("Exit getTopURL: ");
 		return  temp.getImageFileName();
 	}
 	
