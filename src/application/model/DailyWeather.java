@@ -28,13 +28,9 @@ public class DailyWeather {
 	
 	
 	public  DailyWeather(JSONObject weatherobj){
-		//System.out.println("--------------------");
-		
-		//System.out.println(weatherobj);
-		
-		
 		
 		try {
+			
 		JSONObject weatherObject = (JSONObject) ((JSONArray)weatherobj.get("weather")).get(0);
 		
 		JSONObject main = ((JSONObject) weatherobj.get("main"));
@@ -48,7 +44,6 @@ public class DailyWeather {
 		this.setDate((Integer)weatherobj.get("dt"));
 		
 		
-		System.out.println(main.get("dt_date"));
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -68,7 +63,9 @@ public class DailyWeather {
 	public void setTemp(double temp) {
 		this.temp = temp;
 	}
+	
 	/**
+	 * Changes the date from the api from epoch to days
 	 * @return the date
 	 */
 	public String getDate() {

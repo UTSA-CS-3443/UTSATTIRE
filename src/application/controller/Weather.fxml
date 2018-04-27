@@ -18,83 +18,82 @@
             <Font size="99.0" />
          </font>
       </Label>
-      <ImageView fx:id="imgToday" fitHeight="200.0" fitWidth="200.0" layoutX="97.0" layoutY="300.0">
+      <ImageView fx:id="imgToday" fitHeight="200.0" fitWidth="200.0" layoutX="84.0" layoutY="300.0">
          <image>
             <Image url="@http://openweathermap.org/img/w/02n.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgday2" fitHeight="200.0" fitWidth="200.0" layoutX="540.0" layoutY="300.0">
+      <ImageView fx:id="imgday2" fitHeight="200.0" fitWidth="200.0" layoutX="527.0" layoutY="300.0">
          <image>
 
             <Image url="@/Resource/partly-cloudy.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgday3" fitHeight="200.0" fitWidth="200.0" layoutX="960.0" layoutY="300.0">
+      <ImageView fx:id="imgday3" fitHeight="200.0" fitWidth="200.0" layoutX="947.0" layoutY="300.0">
          <image>
             <Image url="@/Resource/rainy.png" />
 
          </image>
       </ImageView>
-      <Label fx:id="today" layoutX="121.0" layoutY="194.0" textFill="#e85b25">
+      <Label fx:id="today" layoutX="111.0" layoutY="194.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="day2" layoutX="577.0" layoutY="194.0" textFill="#e85b25">
+      <Label fx:id="day2" layoutX="556.0" layoutY="194.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="day3" layoutX="967.0" layoutY="194.0" textFill="#e85b25">
+      <Label fx:id="day3" layoutX="972.0" layoutY="203.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="condition1" layoutX="139.0" layoutY="539.0" prefHeight="44.0" prefWidth="125.0" textFill="#e85b25">
+      <Label fx:id="condition1" layoutX="121.0" layoutY="528.0" prefHeight="53.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="condition2" layoutX="536.0" layoutY="539.0" text="Partly Cloudy" textFill="#e85b25">
+      <Label fx:id="condition2" layoutX="566.0" layoutY="528.0" prefHeight="53.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="condition3" layoutX="1017.0" layoutY="539.0" text="Rainy" textFill="#e85b25">
+      <Label fx:id="condition3" layoutX="982.0" layoutY="528.0" prefHeight="53.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="high1" layoutX="134.0" layoutY="593.0" prefHeight="23.0" textFill="#e85b25">
+      <Label fx:id="high1" layoutX="132.0" layoutY="592.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="high2" layoutX="607.0" layoutY="592.0" text="High: 86" textFill="#e85b25">
+      <Label fx:id="high2" layoutX="576.0" layoutY="592.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="high3" layoutX="1027.0" layoutY="592.0" text="High: 83" textFill="#e85b25">
+      <Label fx:id="high3" layoutX="992.0" layoutY="592.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="low1" layoutX="155.0" layoutY="619.0" text="Low: 71" textFill="#e85b25">
+      <Label fx:id="low1" layoutX="131.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="low2" layoutX="607.0" layoutY="619.0" text="Low: 65" textFill="#e85b25">
+      <Label fx:id="low2" layoutX="576.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="low3" layoutX="1027.0" layoutY="619.0" text="Low: 60" textFill="#e85b25">
+      <Label fx:id="low3" layoutX="992.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
    </children>
 </AnchorPane>
-
