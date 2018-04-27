@@ -33,7 +33,7 @@ public class OutfitGenController {
 	@FXML
 	public void initialize() {
 		
-
+/*
 		//Create Outfit object
 		Outfit temp = new Outfit();
 
@@ -78,6 +78,7 @@ public class OutfitGenController {
 		topName.setText(temp.getTopName());
 		bottomName.setText(temp.getBottomName());
 		shoeName.setText(temp.getShoeName());
+		*/
 	}
 	
 	@FXML
@@ -94,7 +95,7 @@ public class OutfitGenController {
 			Main.stage.setScene(scene);
 	    		
 		}else if (event.getSource() == btnGenerate){
-				
+			/*	
 			//Create Outfit object
 			Outfit temp = new Outfit();
 			
@@ -138,7 +139,7 @@ public class OutfitGenController {
 			topName.setText(temp.getTopName());
 			bottomName.setText(temp.getBottomName());
 			shoeName.setText(temp.getShoeName());
-				
+				*/
 		}
 	}
 }
