@@ -23,7 +23,7 @@ public class FiveDayForecast {
 	 */
 	public static ArrayList<DailyWeather> forecast = new ArrayList();
 	
-
+	
 	public FiveDayForecast() throws ClientProtocolException, IOException {
 		
 		

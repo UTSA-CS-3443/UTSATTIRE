@@ -54,7 +54,6 @@ public class WeatherController implements Initializable{
     private Label today, day2, day3;
 
   
-    
 	/**
 	 * Action Event for the Return Home Button
 	 * @param event
