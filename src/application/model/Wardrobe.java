@@ -39,8 +39,6 @@ public class Wardrobe {
 		this.imageFileName = imageFileName;
 	}
 	
-
-	
 	//Getters and Setters
 	public String getName() {
 		return name;
@@ -50,15 +48,14 @@ public class Wardrobe {
 		this.name = name;
 	}
 
-	public String getImageFileName() {
+	public String getImageFileName() 
+	{
 		return imageFileName;
 	}
 
 	public void setImageFileName(String imageFileName) {
 		this.imageFileName = imageFileName;
 	}
-
-
 
 	public boolean getTemp1() {
 		return temp1;
@@ -90,6 +87,10 @@ public class Wardrobe {
 
 	public void setTemp4(boolean temp4) {
 		this.temp4 = temp4;
+	}
+	public String toString()
+	{
+		return "" + getName() + "," + getImageFileName() + "," + getTemp1() + "," + getTemp2() + "," + getTemp3() + "," + getTemp4();
 	}
 }
 

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.EditController">
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.EditController">
    <children>
       <Text fx:id="Title" fill="#e85b25" layoutX="575.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit">
          <font>
@@ -17,8 +17,18 @@
       <ListView fx:id="tops" layoutX="99.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="bottoms" layoutX="540.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="shoes" layoutX="951.0" layoutY="188.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="edit" layoutX="622.0" layoutY="648.0" mnemonicParsing="false" onAction="#handle" text="Edit" />
-      <Button fx:id="home" layoutX="75.0" layoutY="659.0" mnemonicParsing="false" text="Wardrobe" />
+      <Button fx:id="edit" layoutX="1114.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #E85B25;" text="Edit" />
+      <Button fx:id="home" layoutX="99.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleWardrobe" style="-fx-background-color: #E85B25;" text="Wardrobe" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="540.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="userInput" layoutX="99.0" layoutY="490.0" prefHeight="31.0" prefWidth="283.0" />
+      <Text fill="#e85b25" layoutX="144.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name (Descriptor)">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="eightyPlus" layoutX="111.0" layoutY="548.0" mnemonicParsing="false" text="80+°" textFill="#e85b25" />
+      <CheckBox fx:id="sevNineToSixFive" layoutX="110.0" layoutY="578.0" mnemonicParsing="false" text="79° - 65°" textFill="#e85b25" />
+      <CheckBox fx:id="sixFourToFifOne" layoutX="110.0" layoutY="607.0" mnemonicParsing="false" text="64° - 51°" textFill="#e85b25" />
+      <CheckBox fx:id="fiftyBelow" layoutX="110.0" layoutY="636.0" mnemonicParsing="false" text="50-°" textFill="#e85b25" />
    </children>
 </AnchorPane>

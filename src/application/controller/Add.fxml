@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AddController">
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D223F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AddController">
    <children>
       <Button layoutX="95.0" layoutY="642.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #E85B25;" text="Choose File" />
       <CheckBox fx:id="eightyPlus" layoutX="97.0" layoutY="390.0" mnemonicParsing="false" text="80+°" textFill="#e85b25" />
@@ -25,7 +25,8 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="save" layoutX="608.0" layoutY="732.0" mnemonicParsing="false" onAction="#buttonClicked" text="Save" />
+      <Button fx:id="save" layoutX="608.0" layoutY="732.0" mnemonicParsing="false" onAction="#buttonClicked" style="-fx-background-color: #E85B25;" text="Save" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="654.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="52.0" layoutY="33.0" mnemonicParsing="false" onAction="#goHome" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #E85B25;" text="Wardrobe" />
    </children>
 </AnchorPane>

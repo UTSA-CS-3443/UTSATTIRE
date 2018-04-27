@@ -27,6 +27,8 @@ public class AddController
 {
 	
 	@FXML
+	AnchorPane rootPane;
+	@FXML
 	private Button choose;
 	
 	@FXML
@@ -147,5 +149,11 @@ public class AddController
 	{
 		//Call addImage method
 		Add.addImage();
+	}
+	@FXML
+	public void goHome(ActionEvent event) throws IOException
+	{
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("Wardrobe.fxml"));
+		rootPane.getChildren().setAll(pane);
 	}
 }
