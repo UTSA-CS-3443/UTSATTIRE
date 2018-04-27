@@ -94,7 +94,6 @@ public class WeatherController implements Initializable{
 			condition2.setText(FiveDayForecast.getForecast().get(1).getForecast());
 			condition3.setText(FiveDayForecast.getForecast().get(2).getForecast());
 			
-			today.setText(FiveDayForecast.getForecast().get(0).getDate());
 			day2.setText(FiveDayForecast.getForecast().get(1).getDate());
 			day3.setText(FiveDayForecast.getForecast().get(2).getDate());
 			
@@ -103,8 +102,6 @@ public class WeatherController implements Initializable{
 			high3.setText("High: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(2).getTempMax())));
 			
 			low1.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(0).getTempMin())));
-			low2.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(1).getTempMin())));
-			low3.setText("Low: " + String.valueOf(FiveDayForecast.getFahrenheit(FiveDayForecast.getForecast().get(2).getTempMin())));
 			
 			
 			 String path1 = (FiveDayForecast.getForecast().get(0).getIcon());

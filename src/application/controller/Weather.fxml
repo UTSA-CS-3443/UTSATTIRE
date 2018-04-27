@@ -35,7 +35,7 @@
 
          </image>
       </ImageView>
-      <Label fx:id="today" layoutX="111.0" layoutY="194.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
+      <Label fx:id="today" layoutX="111.0" layoutY="194.0" prefHeight="70.0" prefWidth="200.0" text="Today" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
@@ -70,27 +70,17 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="high2" layoutX="576.0" layoutY="592.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
+      <Label fx:id="high2" layoutX="576.0" layoutY="609.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="high3" layoutX="992.0" layoutY="592.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
+      <Label fx:id="high3" layoutX="992.0" layoutY="609.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="low1" layoutX="131.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="low2" layoutX="576.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="low3" layoutX="992.0" layoutY="619.0" prefHeight="27.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="18.0" />
          </font>
