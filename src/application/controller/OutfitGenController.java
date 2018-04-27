@@ -1,5 +1,5 @@
 package application.controller;
-
+ 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -44,7 +44,8 @@ public class OutfitGenController {
 			input = new FileInputStream(temp.getTopURL());
 			Image image = new Image(input);
 			topImage.setImage(image);
-		}
+			//topName.setText(temp.getTopName());
+		} 
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -55,6 +56,7 @@ public class OutfitGenController {
 			input = new FileInputStream(temp.getBottomURL());
 			Image image = new Image(input);
 			bottomImage.setImage(image);
+			//bottomName.setText(temp.getTopName());
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -66,6 +68,7 @@ public class OutfitGenController {
 			input = new FileInputStream(temp.getShoeURL());
 			Image image = new Image(input);
 			shoeImage.setImage(image);
+			//shoeName.setText(temp.getTopName());
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -75,9 +78,9 @@ public class OutfitGenController {
 		
 
 		//Update labels of each clothing
-		topName.setText(temp.getTopName());
-		bottomName.setText(temp.getBottomName());
-		shoeName.setText(temp.getShoeName());
+		//topName.setText(temp.getTopName());
+		//bottomName.setText(temp.getBottomName());
+		//shoeName.setText(temp.getShoeName());
 		
 	}
 	
@@ -101,11 +104,15 @@ public class OutfitGenController {
 			
 			//Upload Outfit images--------------------------------------------------------
 			//input image file for top
+			System.out.println("--------Should Generate");
 			FileInputStream input;
 			try {
 				input = new FileInputStream(temp.getTopURL());
 				Image image = new Image(input);
 				topImage.setImage(image);
+				//System.out.println(temp.getTopName());
+				//topName.setText(temp.getTopName());
+				//System.out.println(topName.getText());
 			}
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -117,6 +124,7 @@ public class OutfitGenController {
 				input = new FileInputStream(temp.getBottomURL());
 				Image image = new Image(input);
 				bottomImage.setImage(image);
+				//bottomName.setText(temp.getTopName());
 			}
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -128,6 +136,7 @@ public class OutfitGenController {
 				input = new FileInputStream(temp.getShoeURL());
 				Image image = new Image(input);
 				shoeImage.setImage(image);
+				//shoeName.setText(temp.getTopName());
 			}
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -136,9 +145,9 @@ public class OutfitGenController {
 	//-------------------------------------------------------------
 			
 			//Update labels of each clothing
-			topName.setText(temp.getTopName());
-			bottomName.setText(temp.getBottomName());
-			shoeName.setText(temp.getShoeName());
+			//topName.setText(temp.getTopName());
+			//bottomName.setText(temp.getBottomName());
+			//shoeName.setText(temp.getShoeName());
 		}
 	}
 }
