@@ -1,7 +1,6 @@
 package application.controller;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -25,6 +24,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * 
+ * @author Team Dragon
+ *	
+ *	This class is responsible for taking in the values the user would like to assign to their selected item they Wish to edit or delete the value that they select from the file
+ */
 public class EditController 
 {
 	@FXML
@@ -54,7 +59,11 @@ public class EditController
 	private ArrayList<Wardrobe> bottomInfo = new ArrayList<Wardrobe>();
 	private ArrayList<Wardrobe> shoeInfo = new ArrayList<Wardrobe>();
 	
-	
+	/**
+	 * Populates a Wardrobe object with the current items in the CSV file.
+	 * Then adds object to array list and adds the name of the item to a separate string array so that it can be compared later
+	 * @throws FileNotFoundException
+	 */
 	public void populate() throws FileNotFoundException
 	{
 		File file = new File("Top.csv");
@@ -109,6 +118,12 @@ public class EditController
 		
 		
 	}
+	/**
+	 * Deletes the line in the file that is passed in.
+	 * @param file: Name of the file you wish to open
+	 * @param getRidOf: The String you wish to get rid of
+	 * @throws IOException
+	 */
 	public void delete(String file, String getRidOf) throws IOException
 	{
 		try {
@@ -159,6 +174,12 @@ public class EditController
 		      ex.printStackTrace();
 		    }
 	}
+	/**
+	 * Event listener that executes the delete method and depending on which item is selected it passes the information that is required for that specific instance.
+	 *
+	 * @param event: Button on the FXML
+	 * @throws IOException
+	 */
 	@FXML
 	public void handleDelete(ActionEvent event) throws IOException
 	{
@@ -191,6 +212,12 @@ public class EditController
 		}
 		handleRefresh();
 	}
+	/**
+	 * Displays the three different arraylists onto the listview so that it can be refreshed becaue the replaceSelected method is called which updates the file and accounts for the different situations that are possible when chossing the threee
+	 * different items
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void handle(ActionEvent event) throws IOException
 	{
@@ -243,8 +270,6 @@ public class EditController
 		if(fiftyBelow.isSelected() == true)
 			tempChecked[3] = true;
 		
-		
-		
 		if(tops.getSelectionModel().getSelectedItem() != null && bottoms.getSelectionModel().getSelectedItem() == null && shoes.getSelectionModel().getSelectedItem() == null)
 		{
 			for(int i=0; i < top.size();i++)
@@ -296,20 +321,22 @@ public class EditController
 			}
 			
 		}
-		
-		
-		
 		tops.setItems(null);
 		tops.setItems(history);
 		bottoms.setItems(null);
 		bottoms.setItems(history1);
 		shoes.setItems(null);
 		shoes.setItems(history2);
-		
-		
 		handleRefresh();
 		
 	}
+	/**
+	 * Method that takes a string and Replaces specific values inside of it and placed back into the file
+	 * @param i index to get current item in the arraylist
+	 * @param tops the arraylist youll be comparing
+	 * @param inputFile the name of the file to be read from
+	 * @param newName The new String you wish to placed
+	 */
 	public static void replaceSelected(int i, ArrayList<Wardrobe> tops, String inputFile, String newName) {
 	    try {
 	        // input the file content to the StringBuffer "input"
@@ -325,24 +352,11 @@ public class EditController
 
 	        file.close();
 
-	        //System.out.println(inputStr); // check that it's inputted right
-
-	        // this if structure determines whether or not to replace "0" or "1"
-	       
-//	        System.out.println(userInput.getText() + "," + tops.get(i).getImageFileName() + "," + tempChecked[0] + "," + tempChecked[1] + "," + tempChecked[2] + "," + tempChecked[3]);
-	        
-	        System.out.println(tops.get(i).getName()+","+tops.get(i).getImageFileName() + "," + tops.get(i).getTemp1() + "," + tops.get(i).getTemp2() + "," + tops.get(i).getTemp3
-            		() + "," + tops.get(i).getTemp4());
-	        
-	        System.out.println(newName);
-	        
+	        	        
 	            inputStr = inputStr.replace(tops.get(i).getName()+","+tops.get(i).getImageFileName() + "," + tops.get(i).getTemp1() + "," + tops.get(i).getTemp2() + "," + tops.get(i).getTemp3
 	            		() + "," + tops.get(i).getTemp4(), newName + "," + tops.get(i).getImageFileName() + "," + tempChecked[0] + "," + tempChecked[1] + "," + tempChecked[2] + "," + tempChecked[3]); 
 	      
 
-	        
-	        // check if the new input is right
-	        System.out.println("----------------------------------\n"  + inputStr);
 
 	        // write the new String with the replaced line OVER the same file
 	        FileOutputStream fileOut = new FileOutputStream(inputFile);
@@ -353,12 +367,20 @@ public class EditController
 	        System.out.println("Problem reading file.");
 	    }
 	}
+	/**
+	 * Takes you back to wardrobe
+	 * @throws IOException
+	 */
 	public void handleWardrobe() throws IOException
 	{
 		
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("Wardrobe.fxml"));
 		rootPane.getChildren().setAll(pane);
 	}
+	/**
+	 * Refreshed the fxml and resets the check boxes back to false
+	 * @throws IOException
+	 */
 	public void handleRefresh() throws IOException
 	{
 		eightyPlus.setSelected(false);
@@ -379,8 +401,10 @@ public class EditController
 		AnchorPane pane = FXMLLoader.load(getClass().getResource("Edit.fxml"));
 		rootPane.getChildren().setAll(pane);
 	}
-	
-		
+	/**
+	 * Displays the list view as well as populating it.	
+	 * @throws FileNotFoundException
+	 */
 	@FXML
 	public void initialize() throws FileNotFoundException 
 	{
@@ -401,10 +425,4 @@ public class EditController
 		shoes.setItems(history2);
 		
 	}
-	
-	
-	
-	
-	
-	
 }

@@ -87,7 +87,11 @@ public class WardrobeController implements Initializable {
 		}
 		
 	}
-    
+    /**
+     * Takes the user back to Main or Controller
+     * @param event
+     * @throws IOException
+     */
     @FXML
     public void buttonClicked(ActionEvent event) throws IOException {
     	
