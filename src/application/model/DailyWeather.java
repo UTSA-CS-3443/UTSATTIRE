@@ -75,7 +75,6 @@ public class DailyWeather {
         Date date = new Date(l);
         DateFormat format = new SimpleDateFormat("EEEE");
         String formatted = format.format(date);
-        System.out.println(formatted);
         formatted = format.format(date);
 
 		return formatted;

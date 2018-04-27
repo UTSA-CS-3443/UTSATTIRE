@@ -88,7 +88,6 @@ public class WeatherController implements Initializable{
 		FiveDayForecast fiveDayForecast;
 		try {
 			fiveDayForecast = new FiveDayForecast();
-			System.out.println(fiveDayForecast.getForecast().get(0).getTempMax());
 			
 			condition1.setText(FiveDayForecast.getForecast().get(0).getForecast());
 			condition2.setText(FiveDayForecast.getForecast().get(1).getForecast());

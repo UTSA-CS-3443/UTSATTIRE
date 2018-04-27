@@ -23,9 +23,7 @@ public class FiveDayForecast {
 	 */
 	public static ArrayList<DailyWeather> forecast = new ArrayList();
 	
-	
-	
-	
+
 	public FiveDayForecast() throws ClientProtocolException, IOException {
 		
 		
@@ -34,6 +32,7 @@ public class FiveDayForecast {
     	String jObjString = ApiUtility.callAPI(endpoint);
 
     	System.out.println("----------------------------------------------");
+    	
     	// for each day call api create object and set;
     	try {
     		
@@ -47,33 +46,13 @@ public class FiveDayForecast {
 				
 				i+=7;
 			}
-			
 
-			
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 		
-		
-		
-		
 	}
 	
-	
-	
-	/**
-	 * @return the forecast
-	 */
-	public ArrayList<String> getPrettyForecast() {
-		ArrayList<String> list = new ArrayList<String>();
-		//loop through objects and print information 
-		// for each object 
-		// string = "Temp:" + object.temp 
-	
-		
-		return list;
-	}
-
 	/**
 	 * @return the forecast
 	 */
