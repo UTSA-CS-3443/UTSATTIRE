@@ -338,7 +338,7 @@ public class Outfit {
 	public String getTopURL()
 	{
 		Wardrobe temp = getTodayTop();
-		return temp.getImageFileName();
+		return "src/Resource/" + temp.getImageFileName();
 	}
 	
 	/**
@@ -348,7 +348,7 @@ public class Outfit {
 	public String getBottomURL()
 	{
 		Wardrobe temp = getTodayBottom();
-		return temp.getImageFileName();
+		return "src/Resource/" + temp.getImageFileName();
 	}
 	
 	/**
@@ -358,7 +358,7 @@ public class Outfit {
 	public String getShoeURL()
 	{
 		Wardrobe temp = getTodayShoe();
-		return temp.getImageFileName();
+		return "src/Resource/" + temp.getImageFileName();
 	}
 	
 	/**

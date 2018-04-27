@@ -49,7 +49,7 @@ public class OutfitGenController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		/*
+		
 		//input image file for bottom
 		try {
 			input = new FileInputStream(temp.getBottomURL());
@@ -78,7 +78,7 @@ public class OutfitGenController {
 		topName.setText(temp.getTopName());
 		bottomName.setText(temp.getBottomName());
 		shoeName.setText(temp.getShoeName());
-		*/
+		
 	}
 	
 	@FXML
