@@ -40,12 +40,12 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="day2" layoutX="556.0" layoutY="194.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
+      <Label fx:id="day2" layoutX="538.0" layoutY="194.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="day3" layoutX="972.0" layoutY="203.0" prefHeight="70.0" prefWidth="200.0" textAlignment="CENTER" textFill="#e85b25">
+      <Label fx:id="day3" layoutX="954.0" layoutY="203.0" textAlignment="CENTER" textFill="#e85b25">
          <font>
             <Font size="48.0" />
          </font>

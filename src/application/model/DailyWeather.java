@@ -73,7 +73,7 @@ public class DailyWeather {
 		Integer i = this.date;
 		Long l = new Long(i)*1000;
         Date date = new Date(l);
-        DateFormat format = new SimpleDateFormat("EEEE");
+        DateFormat format = new SimpleDateFormat("EEE, MM/dd");
         String formatted = format.format(date);
         formatted = format.format(date);
 
