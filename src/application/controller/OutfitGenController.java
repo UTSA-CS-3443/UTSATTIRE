@@ -48,19 +48,24 @@ public class OutfitGenController {
 	@FXML
 	public void initialize(){
 		
-
-		//Create Outfit object
-		//Outfit temp = new Outfit();
+		//Populate Outfit 
 		temp.populateOutfit();
 		
+		//Get today's Top Wardrobe
 		tempTop = temp.getTodayTop();
-//Upload Outfit images--------------------------------------------------------
-		//input image file for top
+		
+		
+		
+		//Upload Outfit to fxml
+		
+		//Initialize input stream
 		FileInputStream input;
 		try {
 			String fileName = "src/Resource/" + tempTop.getImageFileName();
 			input = new FileInputStream(fileName);
 			Image image = new Image(input);
+			
+			//Upload image and text to fxml
 			topImage.setImage(image);
 			topName.setText(tempTop.getName());
 		} 
@@ -69,9 +74,12 @@ public class OutfitGenController {
 			e.printStackTrace();
 		}
 		
+		
+		
+		//Get today's Bot Wardrobe
 		tempBot = temp.getTodayBottom();
 
-		//input image file for Bottom
+		//Upload image and text to fxml
 		try {
 			String fileName = "src/Resource/" + tempBot.getImageFileName();
 			input = new FileInputStream(fileName);
@@ -84,9 +92,12 @@ public class OutfitGenController {
 			e.printStackTrace();
 		}
 		
+		
+		//Get today's Shoe Wardrobe
+		
 		tempShoe = temp.getTodayShoe();
-//Upload Outfit images--------------------------------------------------------
-		//input image file for top
+
+		//Upload image and text to fxml
 		try {
 			String fileName = "src/Resource/" + tempShoe.getImageFileName();
 			input = new FileInputStream(fileName);
@@ -97,20 +108,20 @@ public class OutfitGenController {
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-//-------------------------------------------------------------
-		
-
-		//Update labels of each clothing
-		topName.setText(tempTop.getName());
-		bottomName.setText(tempBot.getName());
-		shoeName.setText(tempShoe.getName());
-		
+		}	
 	}
 	
+	
+	/**
+	 * buttonClicked method when user clicks on any buttons on fxml
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void buttonClicked(ActionEvent event) throws IOException {
 	    	
+		//If user clicks on home button, goes to Main fxml
 		if(event.getSource() == btnHome) {
 	    		
 			FXMLLoader loader = new FXMLLoader();
@@ -120,63 +131,63 @@ public class OutfitGenController {
 			Scene scene = new Scene( layout );
 
 			Main.stage.setScene(scene);
-	    		
+	    
+		//else if user clicks Generate button, generate a new outfit
 		}else if (event.getSource() == btnGenerate){
 			
-			//Create Outfit object
-			//Outfit temp = new Outfit();
+			//populate Outfit object again
 			temp.populateOutfit();
+			
+			
+			
+			//Get top wardrobe from outfit
 			tempTop = temp.getTodayTop();
-			//Upload Outfit images--------------------------------------------------------
-					//input image file for top
-					FileInputStream input;
-					try {
-						String fileName = "src/Resource/" + tempTop.getImageFileName();
-						input = new FileInputStream(fileName);
-						Image image = new Image(input);
-						topImage.setImage(image);
-						topName.setText(tempTop.getName());
-					} 
+			//Upload Top Outfit images
+			//Upload image and text to fxml
+			FileInputStream input;
+			try {
+				String fileName = "src/Resource/" + tempTop.getImageFileName();
+				input = new FileInputStream(fileName);
+				Image image = new Image(input);
+				topImage.setImage(image);
+				topName.setText(tempTop.getName());
+			} 
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-					tempBot = temp.getTodayBottom();
-					//Upload Outfit images--------------------------------------------------------
-							//input image file for top
-							try {
-								String fileName = "src/Resource/" + tempBot.getImageFileName();
-								input = new FileInputStream(fileName);
-								Image image = new Image(input);
-								bottomImage.setImage(image);
-								bottomName.setText(tempBot.getName());
-							} 
-							catch (FileNotFoundException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+			//Get Bottom wardrobe from outfit
+			tempBot = temp.getTodayBottom();
+			//Upload Bottom Outfit images--------------------------------------------------------
+			//Upload image and text to fxml
+			try {
+				String fileName = "src/Resource/" + tempBot.getImageFileName();
+				input = new FileInputStream(fileName);
+				Image image = new Image(input);
+				bottomImage.setImage(image);
+				bottomName.setText(tempBot.getName());
+			} 
+			catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 							
-							tempShoe = temp.getTodayShoe();
-					//Upload Outfit images--------------------------------------------------------
-							//input image file for top
-							try {
-								String fileName = "src/Resource/" + tempShoe.getImageFileName();
-								input = new FileInputStream(fileName);
-								Image image = new Image(input);
-								shoeImage.setImage(image);
-								shoeName.setText(tempShoe.getName());
-							} 
-							catch (FileNotFoundException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-	//-------------------------------------------------------------
-			
-			//Update labels of each clothing
-			topName.setText(tempTop.getName());
-			bottomName.setText(tempBot.getName());
-			shoeName.setText(tempShoe.getName());
+			//Get Shoe wardrobe from outfit 
+			tempShoe = temp.getTodayShoe();
+			//Upload Outfit images
+			//Upload image and text to fxml
+			try {
+				String fileName = "src/Resource/" + tempShoe.getImageFileName();
+				input = new FileInputStream(fileName);
+				Image image = new Image(input);
+				shoeImage.setImage(image);
+				shoeName.setText(tempShoe.getName());
+			} 
+			catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

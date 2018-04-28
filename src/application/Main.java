@@ -52,7 +52,6 @@ public class Main extends Application {
 		}
 	}
 	
-	
 	/**
 	 * Main
 	 * @param args

@@ -19,103 +19,100 @@ import javafx.scene.layout.AnchorPane;
  *
  */
 public class WardrobeController implements Initializable {
-	
+
 	@FXML
-	public Button btnHome;	
+	public Button btnHome;
 	@FXML
 	private Button clickCheck;
-    @FXML
-    private Button Tops, Bottoms, Footwear, edit;
-	
-    public static String clothingTier;
-    
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-       
+	@FXML
+	private Button Tops, Bottoms, Footwear, edit;
 
-        }
+	public static String clothingTier;
 
-    /**
-     * addToWardrobe function is for any of the add buttons clicked to switch to the same Add fxml page. 
-     * 
-     * @param event
-     * @throws IOException
-     */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+
+	}
+
+	/**
+	 * addToWardrobe function is for any of the add buttons clicked to switch to the
+	 * same Add fxml page.
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void addToWardrobe(ActionEvent event) throws IOException {
-		
 
-		clickCheck = (Button)event.getSource();
-		
-		//User clicks which button, and switches to Add function 
-		//along with changing string clothingTier to appropriate clothing
+		clickCheck = (Button) event.getSource();
+
+		// User clicks which button, and switches to Add function
+		// along with changing string clothingTier to appropriate clothing
 		if (clickCheck == Tops) {
-			
+
 			clothingTier = "top";
-			
-    		FXMLLoader loader = new FXMLLoader();
-    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
 
-    		AnchorPane layout = (AnchorPane) loader.load();				
-    		Scene scene = new Scene( layout );
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("controller/Add.fxml"));
 
-    		Main.stage.setScene(scene);	
-		}
-		else if (clickCheck == Bottoms) {
-			
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+
+			Main.stage.setScene(scene);
+		} else if (clickCheck == Bottoms) {
+
 			clothingTier = "bottom";
-			
-    		FXMLLoader loader = new FXMLLoader();
-    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
 
-    		AnchorPane layout = (AnchorPane) loader.load();				
-    		Scene scene = new Scene( layout );
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("controller/Add.fxml"));
 
-    		Main.stage.setScene(scene);	
-		}
-		else if (clickCheck == Footwear) {
-			
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+
+			Main.stage.setScene(scene);
+		} else if (clickCheck == Footwear) {
+
 			clothingTier = "shoe";
-			
-    		FXMLLoader loader = new FXMLLoader();
-    		loader.setLocation( Main.class.getResource("controller/Add.fxml") );
 
-    		AnchorPane layout = (AnchorPane) loader.load();				
-    		Scene scene = new Scene( layout );
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("controller/Add.fxml"));
 
-    		Main.stage.setScene(scene);	
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+
+			Main.stage.setScene(scene);
 		}
-		
+
 	}
-    /**
-     * Takes the user back to Main or Controller
-     * @param event
-     * @throws IOException
-     */
-    @FXML
-    public void buttonClicked(ActionEvent event) throws IOException {
-    	
-    	if(event.getSource() == btnHome) {
-    		
-    		FXMLLoader loader = new FXMLLoader();
-    		loader.setLocation( Main.class.getResource("controller/Main.fxml") );
 
-    		AnchorPane layout = (AnchorPane) loader.load();				
-    		Scene scene = new Scene( layout );
+	/**
+	 * Takes the user back to Main or Controller
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
+	@FXML
+	public void buttonClicked(ActionEvent event) throws IOException {
 
-    		Main.stage.setScene(scene);	
-    	}
-    	else if(event.getSource() == edit)
-    	{
-    		FXMLLoader loader = new FXMLLoader();
-    		loader.setLocation( Main.class.getResource("controller/Edit.fxml") );
+		if (event.getSource() == btnHome) {
 
-    		AnchorPane layout = (AnchorPane) loader.load();				
-    		Scene scene = new Scene( layout );
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("controller/Main.fxml"));
 
-    		Main.stage.setScene(scene);	
-    	}
-    	
-}
-    
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+
+			Main.stage.setScene(scene);
+		} else if (event.getSource() == edit) {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("controller/Edit.fxml"));
+
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+
+			Main.stage.setScene(scene);
+		}
+
+	}
+
 }

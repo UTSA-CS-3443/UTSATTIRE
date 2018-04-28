@@ -1,45 +1,44 @@
 package application.model;
 
 /**
- * Wardrobe model class for the background processes when
- * on Wardrobe fxml
+ * Wardrobe model class for the background processes when on Wardrobe fxml
  * 
  * @author Team Dragon
  *
  */
 public class Wardrobe {
-	
-	private String name, imageFileName; 
-	private boolean temp1 = false,  temp2 = false, temp3 = false, temp4 = false;
-	
+
+	private String name, imageFileName;
+	private boolean temp1 = false, temp2 = false, temp3 = false, temp4 = false;
+
 	/**
-	 * Wardrobe constructor 
+	 * Wardrobe constructor
 	 * 
-	 * @param String name - Description of clothing
+	 * @param String
+	 *            name - Description of clothing
 	 */
-	public Wardrobe(String name,  String imageFileName, boolean t1, boolean t2, boolean t3, boolean t4)
-	{
+	public Wardrobe(String name, String imageFileName, boolean t1, boolean t2, boolean t3, boolean t4) {
 		this.name = name;
 		this.imageFileName = imageFileName;
 		this.setTemp1(t1);
 		this.setTemp2(t2);
 		this.setTemp3(t3);
 		this.setTemp4(t4);
-		
+
 	}
-	
+
 	/**
-	 * Wardrobe constructor 
+	 * Wardrobe constructor
 	 * 
-	 * @param String name - Description of clothing
+	 * @param String
+	 *            name - Description of clothing
 	 */
-	public Wardrobe(String name,  String imageFileName)
-	{
+	public Wardrobe(String name, String imageFileName) {
 		this.name = name;
 		this.imageFileName = imageFileName;
 	}
-	
-	//Getters and Setters
+
+	// Getters and Setters
 	public String getName() {
 		return name;
 	}
@@ -48,9 +47,8 @@ public class Wardrobe {
 		this.name = name;
 	}
 
-	public String getImageFileName() 
-	{
-		return  imageFileName;
+	public String getImageFileName() {
+		return imageFileName;
 	}
 
 	public void setImageFileName(String imageFileName) {
@@ -88,9 +86,9 @@ public class Wardrobe {
 	public void setTemp4(boolean temp4) {
 		this.temp4 = temp4;
 	}
-	public String toString()
-	{
-		return "" + getName() + "," + getImageFileName() + "," + getTemp1() + "," + getTemp2() + "," + getTemp3() + "," + getTemp4();
+
+	public String toString() {
+		return "" + getName() + "," + getImageFileName() + "," + getTemp1() + "," + getTemp2() + "," + getTemp3() + ","
+				+ getTemp4();
 	}
 }
-
