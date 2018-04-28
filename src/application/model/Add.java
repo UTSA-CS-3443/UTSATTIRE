@@ -138,6 +138,7 @@ public class Add {
 	 */
 	public static void addImage()
 	{
+		try {
 		FileChooser c = new FileChooser();
 		
 		//Get extention filters, and add new extension
@@ -162,6 +163,9 @@ public class Add {
 		
 		//update appropriate String variable of clothing url name
 		clothingURL = f1.getName();
+		}catch(NullPointerException e) {
+			System.out.println("Please choose an Image");
+		}
 		
 	}
 	
