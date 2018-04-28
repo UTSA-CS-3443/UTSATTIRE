@@ -24,14 +24,15 @@ Option 2:
  - Now with the Local Destination screen click browse and find a spot where you want to put the application and hit Save -> Next
  - On the Select a wizard to use for importing projects screen make sure that the radio button "Import existing Eclipse Projects"
    is highlighted and hit Next.
- - Now hit Finish
- 
---------------------------------------------------------------------------------------------------------------------------------------- 
+ - Now hit Finish 
   
 After installing UTSAttire to run the program you can right click the project "UTSAttire" in your eclpise -> run as -> Java Application
-- If it didn't 
+- If it didn't start running a seperate box popped up. Be sure to have "Main -application" highlighted and hit OK. This should get you
+started!
 
-to get started you can pick from 3 different options,
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Now that you have UTSAttire downloaded you can pick from 3 different options.
 
 1. You can check the weather for today and the following 2 days.
 
