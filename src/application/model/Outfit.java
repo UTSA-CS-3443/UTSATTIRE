@@ -211,7 +211,9 @@ public class Outfit {
 				if(temp.getTemp1() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
@@ -219,22 +221,29 @@ public class Outfit {
 				System.out.println("Should be the index: " + index+" "+ temp.getImageFileName());
 				if(temp.getTemp2() == true)
 					return temp;
+				else {
+					loop = true;
+				}
 				//Stop loop
-				loop = false;
+				
 			}
 			else if(temperature < 65 && temperature > 50 )
 			{
 				if(temp.getTemp3() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else
 			{
 				if(temp.getTemp4() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 		}
 		return null;
@@ -251,7 +260,7 @@ public class Outfit {
 		//Loop until gets appropriate Top
 		while(loop == true)
 		{
-			System.out.println(Top.size());
+			//System.out.println(Top.size());
 			//Randomly generated index
 			int index = ThreadLocalRandom.current().nextInt(0, Top.size()-1);
 				//int index = 0;
@@ -265,14 +274,18 @@ public class Outfit {
 				if(temp.getTemp1() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
 				if(temp.getTemp2() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 
 			}
 			else if(temperature < 65 && temperature > 50 )
@@ -280,14 +293,18 @@ public class Outfit {
 				if(temp.getTemp3() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else
 			{
 				if(temp.getTemp4() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 		}
 		return null;
@@ -318,28 +335,36 @@ public class Outfit {
 				if(temp.getTemp1() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else if(temperature < 80 && temperature >= 65 )
 			{
 				if(temp.getTemp2() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else if(temperature < 65 && temperature > 50 )
 			{
 				if(temp.getTemp3() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 			else
 			{
 				if(temp.getTemp4() == true)
 					return temp;
 				//Stop loop
-				loop = false;
+				else {
+					loop = true;
+				}
 			}
 		}
 		return null;
