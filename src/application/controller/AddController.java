@@ -102,7 +102,7 @@ public class AddController {
 				// change scene to Wardrobe fxml
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(Main.class.getResource("controller/Wardrobe.fxml"));
-
+				
 				AnchorPane layout = (AnchorPane) loader.load();
 				Scene scene = new Scene(layout);
 
