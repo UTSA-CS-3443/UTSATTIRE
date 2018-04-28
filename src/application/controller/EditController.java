@@ -405,19 +405,6 @@ public class EditController {
 		bottoms.setItems(history1);
 		shoes.setItems(history2);
 		
-		FileInputStream input;
-		try {
-			//temp.getTodayTop();
-			String fileName = "src/Resource/jeans.jpg";
-			input = new FileInputStream(new File(fileName));
-			Image image = new Image(input);
-			current.setImage(image);
-			//topName.setText(temp.getTodayTop().getName());
-			
-		} 
-		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 }
