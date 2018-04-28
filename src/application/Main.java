@@ -7,11 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * Main class to Start app
  * 
- * @author All Members of Team Dragon
+ * @author All Dragon Members of Team Dragon
  *
  */
-
 public class Main extends Application {
 	
 	
@@ -20,6 +20,11 @@ public class Main extends Application {
 	 */
 	public static Stage stage;
 	
+	/**
+	 * Start method 
+	 * 
+	 * @param Stage primaryStage
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		

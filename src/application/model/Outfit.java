@@ -198,7 +198,7 @@ public class Outfit {
 		while(loop == true)
 		{
 			//Randomly generated index
-			int index = ThreadLocalRandom.current().nextInt(0, Top.size() -1);
+			int index = ThreadLocalRandom.current().nextInt(0, Top.size()-1);
 			//int index = 0;
 			
 			//Temp Wardrobe

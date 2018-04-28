@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import application.Main;
 import application.model.Outfit;
+import application.model.Wardrobe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,13 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-//yup
+
+/**
+ * OutfitGenController, controller class that controls the outfit generator
+ * 
+ * @author All Dragon Members of Team Dragon
+ *
+ */
 public class OutfitGenController {
 	
 	@FXML
@@ -31,49 +38,62 @@ public class OutfitGenController {
 	@FXML
 	private Label topName, bottomName, shoeName;
 	
+	private Outfit temp = new Outfit();
+	
+	private Wardrobe tempTop = new Wardrobe("", ""), tempBot = new Wardrobe("", ""), tempShoe = new Wardrobe("", "");
+	
+	/**
+	 * initialize method to initialize the fxml 
+	 */
 	@FXML
 	public void initialize(){
 		
 
 		//Create Outfit object
-		Outfit temp = new Outfit();
+		//Outfit temp = new Outfit();
 		temp.populateOutfit();
+		
+		tempTop = temp.getTodayTop();
 //Upload Outfit images--------------------------------------------------------
 		//input image file for top
 		FileInputStream input;
 		try {
-			String fileName = "src/Resource/" + temp.getTopURL();
+			String fileName = "src/Resource/" + tempTop.getImageFileName();
 			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			topImage.setImage(image);
-			//topName.setText(temp.getTopName());
+			topName.setText(tempTop.getName());
 		} 
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		//input image file for bottom
+		tempBot = temp.getTodayBottom();
+
+		//input image file for Bottom
 		try {
-			String fileName = "src/Resource/" + temp.getBottomURL();
+			String fileName = "src/Resource/" + tempBot.getImageFileName();
 			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			bottomImage.setImage(image);
-			//bottomName.setText(temp.getTopName());
-		}
+			bottomName.setText(tempBot.getName());
+		} 
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		//input image file for shoe
+		tempShoe = temp.getTodayShoe();
+//Upload Outfit images--------------------------------------------------------
+		//input image file for top
 		try {
-			String fileName = "src/Resource/" + temp.getShoeURL();
+			String fileName = "src/Resource/" + tempShoe.getImageFileName();
 			input = new FileInputStream(fileName);
 			Image image = new Image(input);
 			shoeImage.setImage(image);
-			//shoeName.setText(temp.getTopName());
-		}
+			shoeName.setText(tempShoe.getName());
+		} 
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -82,9 +102,9 @@ public class OutfitGenController {
 		
 
 		//Update labels of each clothing
-		//topName.setText(temp.getTopName());
-		//bottomName.setText(temp.getBottomName());
-		//shoeName.setText(temp.getShoeName());
+		topName.setText(tempTop.getName());
+		bottomName.setText(tempBot.getName());
+		shoeName.setText(tempShoe.getName());
 		
 	}
 	
@@ -104,58 +124,59 @@ public class OutfitGenController {
 		}else if (event.getSource() == btnGenerate){
 			
 			//Create Outfit object
-			Outfit temp = new Outfit();
-			
+			//Outfit temp = new Outfit();
+			temp.populateOutfit();
+			tempTop = temp.getTodayTop();
 			//Upload Outfit images--------------------------------------------------------
-			//input image file for top
-			System.out.println("--------Should Generate");
-			FileInputStream input;
-			try {
-				
-				
-				String fileName = "src/Resource/" + temp.getTopURL();
-				input = new FileInputStream(new File(fileName));
-				Image image = new Image(input);
-				topImage.setImage(image);
-			
-			}
+					//input image file for top
+					FileInputStream input;
+					try {
+						String fileName = "src/Resource/" + tempTop.getImageFileName();
+						input = new FileInputStream(fileName);
+						Image image = new Image(input);
+						topImage.setImage(image);
+						topName.setText(tempTop.getName());
+					} 
 			catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-			//input image file for bottom
-			try {
-				String fileName = "src/Resource/" + temp.getBottomURL();
-				input = new FileInputStream(new File(fileName));
-				Image image = new Image(input);
-				bottomImage.setImage(image);
-				//bottomName.setText(temp.getTopName());
-			}
-			catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			//input image file for shoe
-			
-			try {
-				String fileName = "src/Resource/" + temp.getShoeURL();
-				input = new FileInputStream(new File(fileName));
-				Image image = new Image(input);
-				shoeImage.setImage(image);
-				//shoeName.setText(temp.getTopName());
-			}
-			catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+					tempBot = temp.getTodayBottom();
+					//Upload Outfit images--------------------------------------------------------
+							//input image file for top
+							try {
+								String fileName = "src/Resource/" + tempBot.getImageFileName();
+								input = new FileInputStream(fileName);
+								Image image = new Image(input);
+								bottomImage.setImage(image);
+								bottomName.setText(tempBot.getName());
+							} 
+							catch (FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							
+							tempShoe = temp.getTodayShoe();
+					//Upload Outfit images--------------------------------------------------------
+							//input image file for top
+							try {
+								String fileName = "src/Resource/" + tempShoe.getImageFileName();
+								input = new FileInputStream(fileName);
+								Image image = new Image(input);
+								shoeImage.setImage(image);
+								shoeName.setText(tempShoe.getName());
+							} 
+							catch (FileNotFoundException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 	//-------------------------------------------------------------
 			
 			//Update labels of each clothing
-			//topName.setText(temp.getTopName());
-			//bottomName.setText(temp.getBottomName());
-			//shoeName.setText(temp.getShoeName());
+			topName.setText(tempTop.getName());
+			bottomName.setText(tempBot.getName());
+			shoeName.setText(tempShoe.getName());
 		}
 	}
 }
