@@ -11,6 +11,7 @@ Option 1:
   -	Now open up Eclipse and click on File -> Import -> General -> Existing Projects into Workspace -> Next
   -	Click on Browse and find the project and hit open.
   -	Now hit Finish and you can use UTSAttire!
+  
 Option 2:
 
   -	If you have git on already installed onto your eclipse you can do this option
@@ -38,11 +39,11 @@ Now that you have UTSAttire downloaded you can pick from 3 different options.
 
 2.	You can add or edit your wardrobe.
 
-  -	When adding to your wardrobe click on Tops if it's a shirt, bottoms if it's pants/shorts, footwear if it's shoes/sandals. Once  inside the add feature you will type in a name for the item ass a descriptor. Check the boxes containing the type of temperatures you would like to wear the item. Then find the image on your computer using the "Choose File" button (make sure it is either a .png or .jpg) and hit save. This will save it to your wardrobe.
+   -	When adding to your wardrobe click on Tops if it's a shirt, bottoms if it's pants/shorts, footwear if it's shoes/sandals. Once  inside the add feature you will type in a name for the item ass a descriptor. Check the boxes containing the type of temperatures you would like to wear the item. Then find the image on your computer using the "Choose File" button (make sure it is either a .png or .jpg) and hit save. This will save it to your wardrobe.
   
   -	When editing your wardrobe click on the item from the corresponding list (be sure to only highlight the item you’re wanting to edit). After clicking on the item you can change the name and the temperature ranges if wanted. You can also delete an item from your wardrobe if wanted after clicking on it from the list.
   
 3.	You can have UTSAttire generate an outfit for you based on the current temperature by clicking on Get Outfit.
 
-  -	If you happen to not like that outfit, you can hit the Generate button to have it pick out another outfit.
+   -	If you happen to not like that outfit, you can hit the Generate button to have it pick out another outfit.
 
