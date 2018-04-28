@@ -11,6 +11,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * Main class to Start app
+ * 
+ * @author All Dragon Members of Team Dragon
+ *
+ */
 public class MainController {
 
 	@FXML
@@ -20,6 +26,13 @@ public class MainController {
 	@FXML
 	public Button btnOutfit;
 
+	
+	/**
+	 * buttonClicked method for when user clicks on a button
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void buttonClicked(ActionEvent event) throws IOException {
 

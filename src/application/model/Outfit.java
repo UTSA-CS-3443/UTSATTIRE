@@ -252,7 +252,8 @@ public class Outfit {
 	
 	/**
 	 * getTodayShoe method returns top object for Generate 
-	 * @return
+	 * 
+	 * @return 
 	 */
 	public Wardrobe getTodayShoe()
 	{
