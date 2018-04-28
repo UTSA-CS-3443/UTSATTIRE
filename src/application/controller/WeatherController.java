@@ -83,7 +83,7 @@ public class WeatherController implements Initializable{
      */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+
 		FiveDayForecast fiveDayForecast;
 		try {
 			fiveDayForecast = new FiveDayForecast();
@@ -114,10 +114,8 @@ public class WeatherController implements Initializable{
 			imgday3.setImage(image3);
 			
 		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

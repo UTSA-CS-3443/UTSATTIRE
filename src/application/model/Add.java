@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
-
 /**
  * Add model class that takes care of the background
  * processes of Add fxml
@@ -93,7 +92,6 @@ public class Add {
 				pw.write(sb.toString());
 				pw.close();
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -122,7 +120,6 @@ public class Add {
 					pw.write(sb.toString());
 					pw.close();
 				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -154,7 +151,6 @@ public class Add {
 		try {
 			Files.copy(f.toPath(),f1.toPath());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(f1.getAbsolutePath());
@@ -168,9 +164,7 @@ public class Add {
 		}
 		
 	}
-	
-	
-	
+
 	//Getters and Setters
 	public static String getImageURL() {
 		return clothingURL;

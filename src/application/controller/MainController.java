@@ -21,12 +21,13 @@ public class MainController {
 
 	@FXML
 	public Button btnWeather;
+	
 	@FXML
 	public Button btnWardrobe;
+	
 	@FXML
 	public Button btnOutfit;
 
-	
 	/**
 	 * buttonClicked method for when user clicks on a button
 	 * 

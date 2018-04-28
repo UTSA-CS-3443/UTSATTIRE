@@ -14,8 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
-//TODO: Vinh still needs to finish saving Temperature criteria
-
 /**
  * AddController class controls the Add fxml when user is adding a clothing item
  * 
@@ -26,6 +24,7 @@ public class AddController {
 
 	@FXML
 	AnchorPane rootPane;
+	
 	@FXML
 	private Button choose;
 

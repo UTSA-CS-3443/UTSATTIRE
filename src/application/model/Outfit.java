@@ -90,7 +90,6 @@ public class Outfit {
 			inputStream.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -118,7 +117,6 @@ public class Outfit {
 			inputStream.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

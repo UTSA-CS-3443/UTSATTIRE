@@ -54,8 +54,6 @@ public class OutfitGenController {
 		//Get today's Top Wardrobe
 		tempTop = temp.getTodayTop();
 		
-		
-		
 		//Upload Outfit to fxml
 		
 		//Initialize input stream
@@ -70,7 +68,6 @@ public class OutfitGenController {
 			topName.setText(tempTop.getName());
 		} 
 		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -88,13 +85,11 @@ public class OutfitGenController {
 			bottomName.setText(tempBot.getName());
 		} 
 		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
 		//Get today's Shoe Wardrobe
-		
 		tempShoe = temp.getTodayShoe();
 
 		//Upload image and text to fxml
@@ -106,7 +101,6 @@ public class OutfitGenController {
 			shoeName.setText(tempShoe.getName());
 		} 
 		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
@@ -137,11 +131,10 @@ public class OutfitGenController {
 			
 			//populate Outfit object again
 			temp.populateOutfit();
-			
-			
-			
+
 			//Get top wardrobe from outfit
 			tempTop = temp.getTodayTop();
+			
 			//Upload Top Outfit images
 			//Upload image and text to fxml
 			FileInputStream input;
@@ -153,12 +146,12 @@ public class OutfitGenController {
 				topName.setText(tempTop.getName());
 			} 
 			catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 			//Get Bottom wardrobe from outfit
 			tempBot = temp.getTodayBottom();
+			
 			//Upload Bottom Outfit images--------------------------------------------------------
 			//Upload image and text to fxml
 			try {
@@ -169,12 +162,12 @@ public class OutfitGenController {
 				bottomName.setText(tempBot.getName());
 			} 
 			catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 							
 			//Get Shoe wardrobe from outfit 
 			tempShoe = temp.getTodayShoe();
+			
 			//Upload Outfit images
 			//Upload image and text to fxml
 			try {
@@ -185,7 +178,6 @@ public class OutfitGenController {
 				shoeName.setText(tempShoe.getName());
 			} 
 			catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

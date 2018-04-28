@@ -22,8 +22,10 @@ public class WardrobeController implements Initializable {
 
 	@FXML
 	public Button btnHome;
+	
 	@FXML
 	private Button clickCheck;
+	
 	@FXML
 	private Button Tops, Bottoms, Footwear, edit;
 
@@ -59,6 +61,7 @@ public class WardrobeController implements Initializable {
 			Scene scene = new Scene(layout);
 
 			Main.stage.setScene(scene);
+			
 		} else if (clickCheck == Bottoms) {
 
 			clothingTier = "bottom";
@@ -70,6 +73,7 @@ public class WardrobeController implements Initializable {
 			Scene scene = new Scene(layout);
 
 			Main.stage.setScene(scene);
+			
 		} else if (clickCheck == Footwear) {
 
 			clothingTier = "shoe";

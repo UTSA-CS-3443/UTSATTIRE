@@ -37,24 +37,34 @@ import javafx.scene.layout.AnchorPane;
 public class EditController {
 	@FXML
 	private AnchorPane rootPane;
+	
 	@FXML
 	private ListView<String> tops;
+	
 	@FXML
 	private ListView<String> bottoms;
+	
 	@FXML
 	private ListView<String> shoes;
+	
 	@FXML
 	private Button edit;
+	
 	@FXML
 	private Button home;
+	
 	@FXML
 	private ImageView current;
+	
 	@FXML
 	public CheckBox eightyPlus, sevNineToSixFive, sixFourToFifOne, fiftyBelow;
+	
 	@FXML
 	public TextField userInput;
+	
 	// Boolean array for temperatures range
 	private static boolean[] tempChecked = new boolean[4];
+	
 	// String ArrayList for the ListView
 	private ArrayList<String> top = new ArrayList<String>();
 	private ArrayList<String> bottom = new ArrayList<String>();
@@ -74,6 +84,7 @@ public class EditController {
 	 * 				File not found
 	 */
 	public void populate() throws FileNotFoundException {
+		
 		File file = new File("Top.csv");
 		Scanner inputStream = new Scanner(file);
 
@@ -193,13 +204,11 @@ public class EditController {
 	 */
 	@FXML
 	public void handleDelete(ActionEvent event) throws IOException {
+		
 		if (tops.getSelectionModel().getSelectedItem() != null && bottoms.getSelectionModel().getSelectedItem() == null
 				&& shoes.getSelectionModel().getSelectedItem() == null) {
+			
 			for (int i = 0; i < top.size(); i++) {
-				// System.out.println("---------------------" +
-				// topInfo.get(i).getImageFileName());
-				// System.out.println(tops.getSelectionModel().getSelectedItem() +
-				// "-----------------------");
 
 				if (topInfo.get(i).getName().equals(tops.getSelectionModel().getSelectedItem())) {
 
@@ -253,12 +262,7 @@ public class EditController {
 
 		if (fiftyBelow.isSelected() == true)
 			tempChecked[3] = true;
-		
-		
-	
-		
-		
-		
+
 		if (tops.getSelectionModel().getSelectedItem() != null && bottoms.getSelectionModel().getSelectedItem() == null
 				&& shoes.getSelectionModel().getSelectedItem() == null) {
 			for (int i = 0; i < top.size(); i++) {

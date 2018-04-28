@@ -64,8 +64,6 @@ public class FiveDayForecast {
 	public static void setForecast(ArrayList<DailyWeather> forecast) {
 		FiveDayForecast.forecast = forecast;
 	}
-
-	
 	
 	/**
 	 * Method created to convert the Double Kelvin temp. we get from the weather data

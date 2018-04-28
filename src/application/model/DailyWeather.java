@@ -26,7 +26,6 @@ public class DailyWeather {
 	String icon;
 	Integer date;
 	
-	
 	public  DailyWeather(JSONObject weatherobj){
 		
 		try {
@@ -96,9 +95,7 @@ public class DailyWeather {
 	 */
 	public void setIcon(String icon) {
 		this.icon = icon;
-	}
-	
-	
+	}	
 	/**
 	 * @return the forecast
 	 */

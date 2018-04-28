@@ -47,7 +47,7 @@ public class ApiUtility {
 	public static String callAPI(String apiEndpoint) throws ClientProtocolException, IOException {
     CloseableHttpClient httpclient = HttpClients.createDefault();
     try {
-        //HttpGet httpget = new HttpGet("http://api.openweathermap.org/data/2.5/forecast?zip=78023,us&appid=c457ac9a917181dbe62eba28722659c0");
+ 
         HttpGet httpget = new HttpGet(apiEndpoint);
 
         // Create a custom response handler
