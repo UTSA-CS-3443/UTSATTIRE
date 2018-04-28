@@ -18,7 +18,7 @@ public class Main extends Application {
 	/**
 	 * Creating the stage 
 	 */
-	public static Stage stage;
+	public static Stage stage; 
 	
 	/**
 	 * Start method 
