@@ -4,12 +4,14 @@ Welcome to UTSAttire
 
 To download  UTSAttire you can pick one of to options.
 
+Option 1:
  - You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
  - Click download ZIP (this will give you the project)
  - Now open up Eclipse and click on File -> Import -> General -> Existing Projects into Workspace -> Next
  - Click on Browse and find the project and hit open.
  - Now hit Finish and you can use UTSAttire!
    
+Option 2:
  - If you have git on already installed onto your eclipse you can do this option
  - You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
  - Highlight the Url and copy it.
