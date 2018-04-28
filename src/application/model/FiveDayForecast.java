@@ -30,8 +30,6 @@ public class FiveDayForecast {
 		
 		String endpoint  = "http://api.openweathermap.org/data/2.5/forecast?zip=78023,us&appid=c457ac9a917181dbe62eba28722659c0";
     	String jObjString = ApiUtility.callAPI(endpoint);
-
-    	System.out.println("----------------------------------------------");
     	
     	// for each day call api create object and set;
     	try {

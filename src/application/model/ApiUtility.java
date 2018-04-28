@@ -50,8 +50,6 @@ public class ApiUtility {
         //HttpGet httpget = new HttpGet("http://api.openweathermap.org/data/2.5/forecast?zip=78023,us&appid=c457ac9a917181dbe62eba28722659c0");
         HttpGet httpget = new HttpGet(apiEndpoint);
 
-        System.out.println("Executing request " + httpget.getRequestLine());
-
         // Create a custom response handler
         ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
 
