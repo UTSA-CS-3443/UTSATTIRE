@@ -25,6 +25,8 @@ Option 2:
  - On the Select a wizard to use for importing projects screen make sure that the radio button "Import existing Eclipse Projects"
    is highlighted and hit Next.
  - Now hit Finish
+ 
+--------------------------------------------------------------------------------------------------------------------------------------- 
   
 After installing UTSAttire to run the program you can right click the project "UTSAttire" in your eclpise -> run as -> Java Application
 - If it didn't 
