@@ -4,25 +4,25 @@ Welcome to UTSAttire
 
 To download  UTSAttire you can pick one of to options.
 
-1. -You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
-   -Click download ZIP (this will give you the project)
-   -Now open up Eclipse and click on File -> Import -> General -> Existing Projects into Workspace -> Next
-   -Click on Browse and find the project and hit open.
-   -Now hit Finish and you can use UTSAttire!
+ - You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
+ - Click download ZIP (this will give you the project)
+ - Now open up Eclipse and click on File -> Import -> General -> Existing Projects into Workspace -> Next
+ - Click on Browse and find the project and hit open.
+ - Now hit Finish and you can use UTSAttire!
    
-2. -If you have git on already installed onto your eclipse you can do this option
-   -You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
-   -Highlight the Url and copy it.
-   -Now open up Eclipse and click on File -> Import -> Git -> Projects from Git -> Next
-   -When selecting a repository source be sure to click on the "Clone URL" and hit the Next button.
-   -Eclipse should auto populate the correct fields if you correctly copied the URL from the green "Clone or download" button.
-   -If it did not autopopulate start again from step 2.
-   -If it did autopopulate make sure you add in your username and password for "GITHUB" and click on the Next button.
-   -On the Branch selection screen just hit the Next button, eclipse should already have the master box checked.
-   -Now with the Local Destination screen click browse and find a spot where you want to put the application and hit Save -> Next
-   -On the Select a wizard to use for importing projects screen make sure that the radio button "Import existing Eclipse Projects"
-    is highlighted and hit Next.
-   -Now hit Finish
+ - If you have git on already installed onto your eclipse you can do this option
+ - You can go to https://github.com/UTSA-CS-3443/UTSATTIRE and click on the green button "Clone or download"
+ - Highlight the Url and copy it.
+ - Now open up Eclipse and click on File -> Import -> Git -> Projects from Git -> Next
+ - When selecting a repository source be sure to click on the "Clone URL" and hit the Next button.
+ - Eclipse should auto populate the correct fields if you correctly copied the URL from the green "Clone or download" button.
+ - If it did not autopopulate start again from step 2.
+ - If it did autopopulate make sure you add in your username and password for "GITHUB" and click on the Next button.
+ - On the Branch selection screen just hit the Next button, eclipse should already have the master box checked.
+ - Now with the Local Destination screen click browse and find a spot where you want to put the application and hit Save -> Next
+ - On the Select a wizard to use for importing projects screen make sure that the radio button "Import existing Eclipse Projects"
+   is highlighted and hit Next.
+ - Now hit Finish
   
 After installing UTSAttire to run the program you can right click the project "UTSAttire" in your eclpise -> run as -> Java Application
 - If it didn't 
