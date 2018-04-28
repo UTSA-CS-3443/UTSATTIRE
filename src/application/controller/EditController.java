@@ -391,7 +391,7 @@ public class EditController {
 	 * 	File not found
 	 */
 	@FXML
-	public void initialize() throws FileNotFoundException {
+	public void initialize() throws FileNotFoundException { 
 		eightyPlus.setSelected(false);
 		sevNineToSixFive.setSelected(false);
 		sixFourToFifOne.setSelected(false);
