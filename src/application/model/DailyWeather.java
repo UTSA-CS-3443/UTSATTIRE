@@ -130,6 +130,7 @@ public class DailyWeather {
 	 * @param tempMax the tempMax to set
 	 */
 	public void setTempMax(double tempMax) {
+		System.out.println("YEET");
 		this.tempMax = tempMax;
 	}
 
